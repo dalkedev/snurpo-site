@@ -14,13 +14,35 @@ let selected='checkout'; let tab='response';
 function highlight(obj){return escape(JSON.stringify(obj,null,2)).replace(/(&quot;[^\n]*?&quot;)(?=:)/g,'<span class="key">$1</span>');}
 function renderInspector(){
  const s=samples[selected];
+ $('#inspector-method').textContent=s.method;
+ $('#inspector-method').className='method '+(s.method==='GET'?'get':'post');
+ $('#inspector-endpoint').textContent=s.path;
  const title=tab==='response'?`<span class="status ${s.status===200?'ok':'fail'}">${s.status}</span><strong>${s.statusText}</strong>`:tab==='request'?`<span class="method ${s.method==='GET'?'get':'post'}">${s.method}</span><strong>${s.path}</strong>`:tab==='headers'?`<strong>${text('Response headers','Nagłówki odpowiedzi')}</strong>`:`<strong>${text('Request timing','Czas requestu')}</strong>`;
  let code=tab==='response'?highlight(s.response):tab==='request'?(s.method==='GET'?'// '+text('No request body','Brak body requestu'):highlight(s.request)):tab==='headers'?'content-type: application/json\ncache-control: no-store\nx-request-id: demo-'+selected:highlight({dns_ms:4,connect_ms:12,waiting_ms:s.time-18,download_ms:2,total_ms:s.time});
- $('#inspector-content').innerHTML=`<div class="response-title">${title}</div><pre class="response-code"><code>${code}</code></pre>`;
+ $('#inspector-content').innerHTML=`<div class="response-title">${title}</div><pre class="response-code" tabindex="0" aria-label="${escape(text('Selected request data','Dane wybranego requestu')+': '+s.method+' '+s.path)}"><code>${code}</code></pre>`;
  $('#inspector-content').setAttribute('aria-labelledby','tab-'+tab);
  all('[data-inspect]').forEach(b=>{let active=b.dataset.inspect===tab;b.setAttribute('aria-selected',active);b.tabIndex=active?0:-1;});
+ positionInspector();
 }
-all('[data-request]').forEach(b=>b.addEventListener('click',()=>{selected=b.dataset.request;all('[data-request]').forEach(x=>{const active=x===b;x.classList.toggle('selected',active);x.setAttribute('aria-pressed',active);});renderInspector();}));
+function selectRequest(name){
+ selected=name;
+ all('[data-request]').forEach(button=>{const active=button.dataset.request===name;button.classList.toggle('selected',active);button.setAttribute('aria-pressed',active);});
+ renderInspector();
+}
+function positionInspector(){
+ const ticket=$('[data-request="'+selected+'"]');
+ if(!ticket.offsetWidth){selectRequest('checkout');return;}
+ const stage=$('.request-stage');
+ if(window.matchMedia('(max-width:600px)').matches){stage.style.removeProperty('--inspector-x');return;}
+ const panel=$('.inspector');
+ const center=ticket.offsetLeft+ticket.offsetWidth/2;
+ const left=Math.max(0,Math.min(center-panel.offsetWidth/2,stage.clientWidth-panel.offsetWidth));
+ stage.style.setProperty('--inspector-x',left+'px');
+}
+all('[data-request]').forEach(button=>button.addEventListener('click',()=>selectRequest(button.dataset.request)));
+const inspectorResizeObserver=new ResizeObserver(()=>positionInspector());
+inspectorResizeObserver.observe($('.requests'));
+inspectorResizeObserver.observe($('.inspector'));
 all('[data-inspect]').forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.inspect;renderInspector();}));
 $('.inspector-tabs').addEventListener('keydown',e=>{const tabs=all('[data-inspect]');let i=tabs.indexOf(document.activeElement);if(i<0)return;if(e.key==='ArrowRight')i=(i+1)%tabs.length;else if(e.key==='ArrowLeft')i=(i+tabs.length-1)%tabs.length;else if(e.key==='Home')i=0;else if(e.key==='End')i=tabs.length-1;else return;e.preventDefault();tabs[i].focus();tabs[i].click();});
 const motion=window.matchMedia('(prefers-reduced-motion: reduce)');

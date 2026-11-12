@@ -147,6 +147,11 @@
         "purpose": "Brief mascot response to activation."
       },
       {
+        "name": "inspector-follow",
+        "value": "margin-left .35s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Follows the selected ticket within the request stage above 600px. Paused motion and reduced motion disable the transition; mobile keeps the inspector centered."
+      },
+      {
         "name": "button-lift",
         "value": ".3s cubic-bezier(.16,1,.3,1)",
         "purpose": "Hover translateY(-4px), returning to zero on active."
@@ -154,7 +159,7 @@
       {
         "name": "pause-control",
         "value": "animation-play-state: paused !important",
-        "purpose": "Visible pause control toggles motion-paused and updates aria-pressed and its label."
+        "purpose": "Visible pause control toggles motion-paused, pauses CSS animations, disables inspector following transitions and updates aria-pressed and its label."
       },
       {
         "name": "reduced-motion",
@@ -199,7 +204,8 @@
         ".impeccable/surfaces/index-html.md",
         "assets/provenance.json",
         "preview.png",
-        ".impeccable/review/finish-review.md"
+        ".impeccable/review/finish-review.md",
+        ".impeccable/review/panel/metrics.json"
       ],
       "scope": "Implemented website only. No native-app theme changes. No synthesized tonal ramps or unused declarations are promoted to tokens."
     }
@@ -249,9 +255,9 @@
       "name": "Response inspector",
       "kind": "card",
       "refersTo": "inspector",
-      "description": "Cream technical panel with mint active tab and a compact monospace response. The website supplies tab keyboard and data behavior.",
-      "html": "<section class=\"ds-inspector\" aria-label=\"Example response inspector\"><div class=\"ds-tabs\" role=\"tablist\" aria-label=\"Inspect selected request\"><button role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Request</button><button role=\"tab\" id=\"ds-response-tab\" aria-selected=\"true\" aria-controls=\"ds-response\">Response</button><button role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Headers</button><button role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Timing</button></div><div class=\"ds-content\" id=\"ds-response\" role=\"tabpanel\" tabindex=\"0\" aria-labelledby=\"ds-response-tab\"><div class=\"ds-response-title\"><span class=\"ds-badge ds-fail\">503</span><strong>Service Unavailable</strong></div><pre class=\"ds-code\"><code>{\n  <span class=\"ds-key\">\"error\"</span>: \"service_unavailable\",\n  <span class=\"ds-key\">\"retry_after\"</span>: 120\n}</code></pre></div></section>",
-      "css": ".ds-inspector{width:min(440px,100%);background:var(--cream,#fff9ee);color:var(--ink,#29252b);border:3px solid var(--ink,#29252b);border-radius:20px;overflow:hidden;box-shadow:0 8px 20px #79438e12;font:400 13px/1.5 var(--body,Manrope,sans-serif)}.ds-tabs{display:flex;justify-content:space-around;gap:1px;padding:5px;border-bottom:1px solid var(--line,rgba(41,37,43,.22))}.ds-tabs button{background:none;color:inherit;border:0;padding:7px 9px;border-radius:9px;font:400 12px/1.2 var(--body,Manrope,sans-serif);cursor:pointer}.ds-tabs button[aria-selected=true]{background:var(--mint,#a5edc4);font-weight:800}.ds-tabs button:hover{background:#e7dfeb}.ds-tabs button:focus-visible{outline:3px solid #6b248d;outline-offset:6px}.ds-content:focus-visible{outline:3px solid #6b248d;outline-offset:6px}.ds-tabs button:active{translate:0 1px}.ds-content{padding:10px 14px 13px;min-height:145px}.ds-response-title{display:flex;align-items:center;gap:10px;margin-bottom:7px;font-size:14px}.ds-code{margin:0;font:400 11px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;color:#322141;white-space:pre-wrap;word-break:break-word;background:#f5efe7;border:1px solid #d6c9c0;border-radius:10px;padding:7px 9px;min-height:92px}.ds-code code{font:inherit}.ds-key{color:#743895}.ds-badge{display:inline-block;font-size:max(11px,.9em);line-height:1.4;border-radius:7px;padding:1px 6px;font-weight:800;letter-spacing:-.025em;font-variant-numeric:tabular-nums}.ds-ok{background:#b8f3cf;color:#174c31}.ds-post{background:#e3c4f5;color:#512767}.ds-fail{background:#ffc1b9;color:#852c24}"
+      "description": "Cream technical panel with persistent method and endpoint context, mint active tab and a 144px scrollable monospace viewport. Above 600px it follows the selected ticket within the request stage; mobile keeps it centered. The website supplies selection, keyboard navigation and scroll reset behavior.",
+      "html": "<section class=\"ds-inspector\" aria-label=\"Example response inspector\"><div class=\"ds-inspector-context\" aria-live=\"polite\" aria-atomic=\"true\"><span class=\"ds-badge ds-post\">POST</span><code>/api/checkout</code></div><div class=\"ds-tabs\" role=\"tablist\" aria-label=\"Inspect selected request\"><button role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Request</button><button role=\"tab\" id=\"ds-response-tab\" aria-selected=\"true\" aria-controls=\"ds-response\">Response</button><button role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Headers</button><button role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Timing</button></div><div class=\"ds-content\" id=\"ds-response\" role=\"tabpanel\" tabindex=\"0\" aria-labelledby=\"ds-response-tab\"><div class=\"ds-response-title\"><span class=\"ds-badge ds-fail\">503</span><strong>Service Unavailable</strong></div><pre class=\"ds-code\" tabindex=\"0\" aria-label=\"Selected request data: POST /api/checkout\"><code>{\n  <span class=\"ds-key\">\"error\"</span>: \"service_unavailable\",\n  <span class=\"ds-key\">\"retry_after\"</span>: 120\n}</code></pre></div></section>",
+      "css": ".ds-inspector{width:min(440px,100%);background:var(--cream,#fff9ee);color:var(--ink,#29252b);border:3px solid var(--ink,#29252b);border-radius:20px;overflow:hidden;box-shadow:0 8px 20px #79438e12;font:400 13px/1.5 var(--body,Manrope,sans-serif)}.ds-inspector-context{display:flex;align-items:center;gap:9px;padding:9px 14px 4px;font-size:12px;line-height:1.4}.ds-inspector-context code{font:600 12px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace}.ds-tabs{display:flex;justify-content:space-around;gap:1px;padding:5px;border-bottom:1px solid var(--line,rgba(41,37,43,.22))}.ds-tabs button{background:none;color:inherit;border:0;padding:7px 9px;border-radius:9px;font:400 12px/1.2 var(--body,Manrope,sans-serif);cursor:pointer}.ds-tabs button[aria-selected=true]{background:var(--mint,#a5edc4);font-weight:800}.ds-tabs button:hover{background:#e7dfeb}.ds-tabs button:focus-visible{outline:3px solid #6b248d;outline-offset:6px}.ds-content:focus-visible,.ds-code:focus-visible{outline:3px solid #6b248d;outline-offset:6px}.ds-tabs button:active{translate:0 1px}.ds-content{padding:10px 14px 13px;min-height:0}.ds-response-title{display:flex;align-items:center;gap:10px;margin-bottom:7px;font-size:14px;min-height:21px}.ds-code{margin:0;font:400 11px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;color:#322141;white-space:pre-wrap;word-break:break-word;background:#f5efe7;border:1px solid #d6c9c0;border-radius:10px;padding:7px 9px;box-sizing:border-box;height:144px;min-height:0;overflow:auto;scrollbar-gutter:stable}.ds-code code{font:inherit}.ds-key{color:#743895}.ds-badge{display:inline-block;font-size:max(11px,.9em);line-height:1.4;border-radius:7px;padding:1px 6px;font-weight:800;letter-spacing:-.025em;font-variant-numeric:tabular-nums}.ds-ok{background:#b8f3cf;color:#174c31}.ds-post{background:#e3c4f5;color:#512767}.ds-fail{background:#ffc1b9;color:#852c24}"
     },
     {
       "name": "Platform download row",

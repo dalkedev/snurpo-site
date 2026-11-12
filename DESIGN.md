@@ -213,7 +213,7 @@ Responsive behavior follows the actual CSS breakpoints:
 
 - **1650px and above:** the opening gains height and the mascot may grow to 650px.
 - **1200px and below:** the navigation, opening controls and request tickets become more compact; ordinary section spacing contracts.
-- **900px and below:** two request choices remain visible; the third is hidden. Product, terminal and evidence layouts progressively stack, while related supporting text can remain in two columns.
+- **900px and below:** two request choices remain visible; the third is hidden. If the profile request was selected before resizing, selection returns to checkout. Product, terminal and evidence layouts progressively stack, while related supporting text can remain in two columns.
 - **600px and below:** navigation keeps GitHub and the language selector. The hero title wraps, the mascot and two request choices share a compact scene, and the inspector sits below it at 90% width. The gallery becomes two columns; workflow, evidence, download and footer content stack. Screenshot and terminal rotations are removed where specified. Expand labels remain visible without hover.
 - **370px and below:** action labels and ticket copy contract again, and the opening reserves extra vertical space.
 
@@ -243,7 +243,11 @@ The wordmark uses Fredoka 700. Desktop navigation uses Fredoka 600 and an underl
 
 ### Request tickets and response inspector
 
-Tickets are buttons with method, path and HTTP status. Their state uses `aria-pressed`, a mint outer ring and brighter cream fill. The inspector uses the same cream and charcoal language with a quieter monospace code area. Selected tabs use mint and weight emphasis. Arrow keys, Home and End move and activate the tab selection; the panel remains focusable.
+Tickets are buttons with method, path and HTTP status. Their state uses `aria-pressed`, a mint outer ring and brighter cream fill. Above 600px, the inspector follows the selected ticket horizontally, clamped within the request stage; its position uses the ticket's layout bounds rather than its decorative bobbing. At 600px and below, the inspector remains centered at 90% width beneath the scene.
+
+The inspector uses the same cream and charcoal language with a persistent method and endpoint header. That short context is announced politely when selection changes. Selected tabs use mint and weight emphasis. Arrow keys, Home and End move and activate the tab selection; the panel and code area remain focusable. The code viewport is 144px high with internal scrolling and a stable scrollbar gutter, so longer JSON does not expand the inspector or move the hint. Selecting a request or tab starts the code at the top. The hero reserves bottom padding to keep the hint and motion control clear of the wave.
+
+Horizontal following uses a `.35s` transition with the principal easing. Pausing motion or requesting reduced motion removes that transition while retaining selection and position updates.
 
 The scene is explicitly labeled example traffic. Clicking the mascot selects the failing checkout request and provides a short status message. It does not initiate network capture.
 
