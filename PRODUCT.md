@@ -24,4 +24,4 @@ Snurpo 1.5.0 is a local desktop HTTP(S) debugger: capture, inspect, rules, mock,
 Local repository ../snurpo at release 1.5.0; https://github.com/dalkedev/snurpo . Clean native 1.4.2 gallery and 1.5.0 cURL screenshots with provenance. Mascot and banner in ../snurpo-brand.
 
 ## Actions
-Download native app; explore source; read getting started; support creator at https://buymeacoffee.com/dalkedev . snurpo.dev has not been confirmed as purchased. Use preview URL until domain ownership is known.
+Download native app; explore source; read getting started; support creator at https://buymeacoffee.com/dalkedev . The production site is https://snurpo.dev on the owner's Vercel project, with source at github.com/dalkedev/snurpo-site. The field guide at /docs/ is generated from canonical Snurpo docs/website Markdown and shares the mascot, typography and palette.

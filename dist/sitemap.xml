@@ -12,4 +12,18 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://snurpo.dev/pl/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://snurpo.dev/"/>
   </url>
+  <url><loc>https://snurpo.dev/docs/</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://snurpo.dev/docs/installation/</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://snurpo.dev/docs/first-capture/</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://snurpo.dev/docs/https/</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://snurpo.dev/docs/inspect-and-search/</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://snurpo.dev/docs/rules-breakpoints/</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://snurpo.dev/docs/replay-curl/</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://snurpo.dev/docs/sessions-export/</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://snurpo.dev/docs/analysis/</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://snurpo.dev/docs/mcp/</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://snurpo.dev/docs/android/</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://snurpo.dev/docs/har-compare-ci/</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://snurpo.dev/docs/troubleshooting/</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://snurpo.dev/docs/releases/</loc><lastmod>2026-11-12</lastmod></url>
 </urlset>
