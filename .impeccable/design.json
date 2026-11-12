@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-12T09:51:25.399275+00:00",
+  "title": "Design System: Snurpo website",
+  "extensions": {
+    "colorMeta": {
+      "lavender": {
+        "role": "primary",
+        "displayName": "Nose lavender"
+      },
+      "mint": {
+        "role": "primary",
+        "displayName": "Curious mint"
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Warm cream"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Charcoal ink"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted plum"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Transparent ink line"
+      },
+      "workflow-mint": {
+        "role": "secondary",
+        "displayName": "Workflow mint"
+      },
+      "mint-hover": {
+        "role": "secondary",
+        "displayName": "Mint hover"
+      },
+      "cream-hover": {
+        "role": "secondary",
+        "displayName": "Cream hover"
+      },
+      "ticket-selected": {
+        "role": "neutral",
+        "displayName": "Selected ticket cream"
+      },
+      "success-bg": {
+        "role": "semantic",
+        "displayName": "Success fill"
+      },
+      "success-text": {
+        "role": "semantic",
+        "displayName": "Success text"
+      },
+      "post-bg": {
+        "role": "semantic",
+        "displayName": "POST fill"
+      },
+      "post-text": {
+        "role": "semantic",
+        "displayName": "POST text"
+      },
+      "failure-bg": {
+        "role": "semantic",
+        "displayName": "Failure fill"
+      },
+      "failure-text": {
+        "role": "semantic",
+        "displayName": "Failure text"
+      },
+      "focus": {
+        "role": "semantic",
+        "displayName": "Focus purple"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Fredoka 700 for the large opening title; mobile wrapping is recorded in DESIGN.md."
+      },
+      "headline": {
+        "displayName": "Section headline",
+        "purpose": "Fredoka 700 for section headings."
+      },
+      "title": {
+        "displayName": "Content title",
+        "purpose": "Base h3 role; workflow and evidence have documented local sizing."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Manrope 400 for reading; mobile base size becomes 16px."
+      },
+      "control": {
+        "displayName": "Major control",
+        "purpose": "Fredoka 600 for outlined primary and secondary actions."
+      },
+      "navigation": {
+        "displayName": "Navigation",
+        "purpose": "Fredoka 600 for desktop header navigation."
+      },
+      "code": {
+        "displayName": "Terminal code",
+        "purpose": "Platform monospace stack for the terminal command; inspector code is a compact local variant."
+      }
+    },
+    "shadows": [
+      {
+        "name": "inspector-rest",
+        "value": "0 8px 20px #79438e12",
+        "purpose": "Subtle lift under the outlined example inspector."
+      },
+      {
+        "name": "button-hover",
+        "value": "0 8px 15px #5f3a6b1f",
+        "purpose": "Soft support when a major action rises on hover."
+      },
+      {
+        "name": "terminal-rest",
+        "value": "0 20px 50px #29252b1a",
+        "purpose": "Separation below the dark terminal demonstration."
+      },
+      {
+        "name": "image-dialog",
+        "value": "0 30px 100px #0005",
+        "purpose": "Modal separation over the dark backdrop."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Principal easing for lifts, shifts, the switch and mascot response."
+      },
+      {
+        "name": "ribbon-flow",
+        "value": "10s linear infinite",
+        "purpose": "Moves the SVG dash offset to -565."
+      },
+      {
+        "name": "ticket-bob",
+        "value": "5s ease-in-out infinite",
+        "purpose": "Moves tickets upward by 7px and adds a one-degree rotation at midpoint."
+      },
+      {
+        "name": "mascot-sniff",
+        "value": ".7s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Brief mascot response to activation."
+      },
+      {
+        "name": "button-lift",
+        "value": ".3s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Hover translateY(-4px), returning to zero on active."
+      },
+      {
+        "name": "pause-control",
+        "value": "animation-play-state: paused !important",
+        "purpose": "Visible pause control toggles motion-paused and updates aria-pressed and its label."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none !important; transition: none !important",
+        "purpose": "prefers-reduced-motion also disables smooth scrolling; static ticket rotations remain."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-min",
+        "value": "1650px"
+      },
+      {
+        "name": "compact-max",
+        "value": "1200px"
+      },
+      {
+        "name": "stacking-max",
+        "value": "900px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "600px"
+      },
+      {
+        "name": "narrow-max",
+        "value": "370px"
+      }
+    ],
+    "focus": {
+      "outline": "3px solid #6b248d",
+      "outlineOffset": "6px",
+      "purpose": "Global focus-visible treatment."
+    },
+    "provenance": {
+      "sources": [
+        "styles.css",
+        "build.mjs",
+        "app.js",
+        "fonts/fonts.css",
+        "PRODUCT.md",
+        ".impeccable/surfaces/index-html.md",
+        "assets/provenance.json",
+        "preview.png",
+        ".impeccable/review/finish-review.md"
+      ],
+      "scope": "Implemented website only. No native-app theme changes. No synthesized tonal ramps or unused declarations are promoted to tokens."
+    }
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Outlined Fredoka action; opening placement enlarges its existing base size.",
+      "html": "<button class=\"ds-button ds-mint\" type=\"button\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5\"/></svg>Download Snurpo</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:15px 24px;border:2px solid var(--ink,#29252b);border-radius:100px;font:600 23px/1.1 var(--display,Fredoka,sans-serif);white-space:nowrap;color:var(--ink,#29252b);text-decoration:none;cursor:pointer;transition:background .25s,transform .3s var(--ease,cubic-bezier(.16,1,.3,1)),box-shadow .3s var(--ease,cubic-bezier(.16,1,.3,1))}.ds-button:hover{transform:translateY(-4px);box-shadow:0 8px 15px #5f3a6b1f}.ds-button:active{transform:translateY(0);translate:0 1px}.ds-button:focus-visible{outline:3px solid #6b248d;outline-offset:6px}.ds-icon{display:block;width:24px;height:24px;flex:none}@media(prefers-reduced-motion:reduce){.ds-button{animation:none!important;transition:none!important}}.ds-mint{background:var(--mint,#a5edc4)}.ds-mint:hover{background:#c2f7d8}"
+    },
+    {
+      "name": "Secondary action",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outlined Fredoka action; opening placement enlarges its existing base size.",
+      "html": "<button class=\"ds-button ds-cream\" type=\"button\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M9 19c-4 1-4-2-5-2m10 4v-3.4c0-1 .1-1.5-.5-2.1 3.3-.4 6.5-1.5 6.5-6A4.6 4.6 0 0 0 18.8 6c.1-.4.6-1.8-.1-3.5 0 0-1.1-.3-3.6 1.3a12.3 12.3 0 0 0-6.2 0C6.4 2.2 5.3 2.5 5.3 2.5 4.6 4.2 5.1 5.6 5.2 6A4.6 4.6 0 0 0 4 9.5c0 4.5 3.2 5.6 6.5 6-.5.5-.6 1.1-.5 2.1V21\"/></svg>Explore GitHub</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:15px 24px;border:2px solid var(--ink,#29252b);border-radius:100px;font:600 23px/1.1 var(--display,Fredoka,sans-serif);white-space:nowrap;color:var(--ink,#29252b);text-decoration:none;cursor:pointer;transition:background .25s,transform .3s var(--ease,cubic-bezier(.16,1,.3,1)),box-shadow .3s var(--ease,cubic-bezier(.16,1,.3,1))}.ds-button:hover{transform:translateY(-4px);box-shadow:0 8px 15px #5f3a6b1f}.ds-button:active{transform:translateY(0);translate:0 1px}.ds-button:focus-visible{outline:3px solid #6b248d;outline-offset:6px}.ds-icon{display:block;width:24px;height:24px;flex:none}@media(prefers-reduced-motion:reduce){.ds-button{animation:none!important;transition:none!important}}.ds-cream{background:var(--cream,#fff9ee)}.ds-cream:hover{background:#f3e6fc}"
+    },
+    {
+      "name": "Header navigation and language selector",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Rounded navigation, revealed underline and a cream EN/PL selector with a charcoal current language.",
+      "html": "<div class=\"ds-header\"><nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#app\">The app</a><a href=\"#how\">How it works</a><a href=\"https://github.com/dalkedev/snurpo\">GitHub<svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a></nav><div class=\"ds-languages\" aria-label=\"Language\"><a href=\"/\" lang=\"en\" aria-current=\"page\">EN</a><span>/</span><a href=\"/pl/\" lang=\"pl\">PL</a></div></div>",
+      "css": ".ds-header{display:flex;align-items:center;gap:42px;color:var(--ink,#29252b)}.ds-nav{display:flex;align-items:center;gap:44px;font:600 21px/1.2 var(--display,Fredoka,sans-serif)}.ds-nav a{display:inline-flex;align-items:center;gap:6px;padding:10px 0;position:relative;color:inherit;text-decoration:none}.ds-nav a:after{position:absolute;content:\"\";height:3px;background:var(--ink,#29252b);bottom:0;left:0;right:100%;transition:right .25s var(--ease,cubic-bezier(.16,1,.3,1))}.ds-nav a:hover:after{right:0}.ds-languages{display:flex;align-items:center;border:2px solid var(--ink,#29252b);border-radius:100px;padding:3px;background:var(--cream,#fff9ee);font:800 14px/1.65 var(--body,Manrope,sans-serif)}.ds-languages a{padding:4px 9px;border-radius:100px;color:#78697d;text-decoration:none;transition:background .2s,color .2s}.ds-languages a[aria-current],.ds-languages a:hover{background:var(--ink,#29252b);color:var(--cream,#fff9ee)}.ds-languages span{padding-inline:2px;color:#776d7c}.ds-header a:focus-visible{outline:3px solid #6b248d;outline-offset:6px}.ds-header a:active{translate:0 1px}.ds-icon{display:block;width:24px;height:24px;flex:none}.ds-nav .ds-icon{width:17px;height:17px}@media(max-width:600px){.ds-header{gap:15px}.ds-nav a{display:none}.ds-nav a:last-child{display:flex;font-size:16px}.ds-languages{font-size:12px;padding:2px}.ds-languages a{padding:4px 7px}}@media(prefers-reduced-motion:reduce){.ds-nav a:after,.ds-languages a{transition:none!important}}"
+    },
+    {
+      "name": "HTTP method and status badges",
+      "kind": "chip",
+      "refersTo": "status-failure",
+      "description": "Text and numeric status preserve meaning alongside mint, lavender and coral. These badges are not interactive.",
+      "html": "<span class=\"ds-badges\"><span class=\"ds-badge ds-ok\">GET</span> <span class=\"ds-badge ds-ok\">200</span> <span class=\"ds-badge ds-post\">POST</span> <span class=\"ds-badge ds-fail\">503</span></span>",
+      "css": ".ds-badges{font:600 20px/1.65 var(--display,Fredoka,sans-serif)}.ds-badge{display:inline-block;font-size:max(11px,.9em);line-height:1.4;border-radius:7px;padding:1px 6px;font-weight:800;letter-spacing:-.025em;font-variant-numeric:tabular-nums}.ds-ok{background:#b8f3cf;color:#174c31}.ds-post{background:#e3c4f5;color:#512767}.ds-fail{background:#ffc1b9;color:#852c24}"
+    },
+    {
+      "name": "Selected request ticket",
+      "kind": "custom",
+      "refersTo": "request-ticket",
+      "description": "An outlined example request with a mint state ring and a pointer toward the inspector. The website supplies selection behavior.",
+      "html": "<button class=\"ds-ticket\" type=\"button\" aria-pressed=\"true\"><span class=\"ds-badge ds-post\">POST</span><span>/api/checkout</span><span class=\"ds-badge ds-fail\">503</span></button>",
+      "css": ".ds-ticket{display:flex;align-items:center;justify-content:space-between;gap:9px;border:3px solid var(--ink,#29252b);color:var(--ink,#29252b);background:var(--cream,#fff9ee);border-radius:20px;min-height:80px;padding:16px 17px;font:600 clamp(15px,1.4vw,22px)/1.65 var(--display,Fredoka,sans-serif);position:relative;white-space:nowrap;cursor:pointer;transition:background .2s,box-shadow .2s;transform:rotate(-4deg)}.ds-ticket:hover,.ds-ticket[aria-pressed=true]{box-shadow:0 0 0 5px var(--mint,#a5edc4)}.ds-ticket[aria-pressed=true]{background:#fffdf6}.ds-ticket[aria-pressed=true]:after{content:\"\";position:absolute;bottom:-13px;left:48%;width:18px;height:18px;background:#fffdf6;border-right:3px solid var(--ink,#29252b);border-bottom:3px solid var(--ink,#29252b);transform:rotate(45deg)}.ds-ticket:focus-visible{outline:3px solid #6b248d;outline-offset:6px}.ds-ticket:active{translate:0 1px}.ds-badge{display:inline-block;font-size:max(11px,.9em);line-height:1.4;border-radius:7px;padding:1px 6px;font-weight:800;letter-spacing:-.025em;font-variant-numeric:tabular-nums}.ds-ok{background:#b8f3cf;color:#174c31}.ds-post{background:#e3c4f5;color:#512767}.ds-fail{background:#ffc1b9;color:#852c24}@media(max-width:600px){.ds-ticket{min-height:53px;font-size:13px;padding:11px 10px;gap:6px;border-width:2px;border-radius:13px}.ds-ticket[aria-pressed=true]:after{display:none}}@media(prefers-reduced-motion:reduce){.ds-ticket{animation:none!important;transition:none!important}}"
+    },
+    {
+      "name": "Response inspector",
+      "kind": "card",
+      "refersTo": "inspector",
+      "description": "Cream technical panel with mint active tab and a compact monospace response. The website supplies tab keyboard and data behavior.",
+      "html": "<section class=\"ds-inspector\" aria-label=\"Example response inspector\"><div class=\"ds-tabs\" role=\"tablist\" aria-label=\"Inspect selected request\"><button role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Request</button><button role=\"tab\" id=\"ds-response-tab\" aria-selected=\"true\" aria-controls=\"ds-response\">Response</button><button role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Headers</button><button role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Timing</button></div><div class=\"ds-content\" id=\"ds-response\" role=\"tabpanel\" tabindex=\"0\" aria-labelledby=\"ds-response-tab\"><div class=\"ds-response-title\"><span class=\"ds-badge ds-fail\">503</span><strong>Service Unavailable</strong></div><pre class=\"ds-code\"><code>{\n  <span class=\"ds-key\">\"error\"</span>: \"service_unavailable\",\n  <span class=\"ds-key\">\"retry_after\"</span>: 120\n}</code></pre></div></section>",
+      "css": ".ds-inspector{width:min(440px,100%);background:var(--cream,#fff9ee);color:var(--ink,#29252b);border:3px solid var(--ink,#29252b);border-radius:20px;overflow:hidden;box-shadow:0 8px 20px #79438e12;font:400 13px/1.5 var(--body,Manrope,sans-serif)}.ds-tabs{display:flex;justify-content:space-around;gap:1px;padding:5px;border-bottom:1px solid var(--line,rgba(41,37,43,.22))}.ds-tabs button{background:none;color:inherit;border:0;padding:7px 9px;border-radius:9px;font:400 12px/1.2 var(--body,Manrope,sans-serif);cursor:pointer}.ds-tabs button[aria-selected=true]{background:var(--mint,#a5edc4);font-weight:800}.ds-tabs button:hover{background:#e7dfeb}.ds-tabs button:focus-visible{outline:3px solid #6b248d;outline-offset:6px}.ds-content:focus-visible{outline:3px solid #6b248d;outline-offset:6px}.ds-tabs button:active{translate:0 1px}.ds-content{padding:10px 14px 13px;min-height:145px}.ds-response-title{display:flex;align-items:center;gap:10px;margin-bottom:7px;font-size:14px}.ds-code{margin:0;font:400 11px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;color:#322141;white-space:pre-wrap;word-break:break-word;background:#f5efe7;border:1px solid #d6c9c0;border-radius:10px;padding:7px 9px;min-height:92px}.ds-code code{font:inherit}.ds-key{color:#743895}.ds-badge{display:inline-block;font-size:max(11px,.9em);line-height:1.4;border-radius:7px;padding:1px 6px;font-weight:800;letter-spacing:-.025em;font-variant-numeric:tabular-nums}.ds-ok{background:#b8f3cf;color:#174c31}.ds-post{background:#e3c4f5;color:#512767}.ds-fail{background:#ffc1b9;color:#852c24}"
+    },
+    {
+      "name": "Platform download row",
+      "kind": "custom",
+      "refersTo": "download-option",
+      "description": "Cream outlined platform action with mint hover and a short horizontal movement.",
+      "html": "<a class=\"ds-download\" href=\"https://github.com/dalkedev/snurpo/releases/latest\"><span class=\"ds-platform\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 4h18v13H3zM8 21h8m-4-4v4\"/></svg></span><span class=\"ds-platform-text\"><strong>macOS</strong><small>Apple Silicon</small></span><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5\"/></svg></a>",
+      "css": ".ds-download{display:flex;align-items:center;gap:18px;padding:21px 22px;background:var(--cream,#fff9ee);color:var(--ink,#29252b);border:2px solid var(--ink,#29252b);border-radius:14px;text-decoration:none;font:400 17px/1.65 var(--body,Manrope,sans-serif);transition:background .2s,transform .3s var(--ease,cubic-bezier(.16,1,.3,1))}.ds-download:hover{background:var(--mint,#a5edc4);transform:translateX(6px)}.ds-download:active{translate:0 1px}.ds-download:focus-visible{outline:3px solid #6b248d;outline-offset:6px}.ds-platform-text{flex:1}.ds-download strong{font:600 23px/1.2 var(--display,Fredoka,sans-serif);display:block}.ds-download small{display:block;margin-top:5px;color:var(--muted,#66576c);font-size:13px;line-height:1.65}.ds-icon{display:block;width:24px;height:24px;flex:none}.ds-platform .ds-icon{width:29px;height:29px}@media(prefers-reduced-motion:reduce){.ds-download{animation:none!important;transition:none!important}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Curiosity with a nose",
+    "overview": "Snurpo is friendly, nosy and precise. The canonical mint creature, oversized lavender nose and cream eyes supply the expressive character. Broad color fields, rounded display lettering and charcoal contours give the website the same recognizable silhouette without competing with the mascot.\n\nThe material contrast is deliberate: the supplied raster illustration has a hand-drawn appearance, shaded volume and irregular outlines; the interactive request ribbon is clean SVG geometry with rounded CSS tickets. Genuine dark application screenshots anchor the playful world in readable product evidence. This records the implemented website, not a redesign of the native application.",
+    "keyCharacteristics": [
+      "Lavender grounds, mint actions, cream reading surfaces and charcoal contours.",
+      "Fredoka gives headlines and major controls a rounded voice; Manrope carries explanatory copy.",
+      "Spacious asymmetrical compositions change scale around real product captures.",
+      "Small rotations and restrained movement connect curiosity to interaction.",
+      "Keyboard access, visible focus and reduced motion are part of the visual behavior."
+    ],
+    "rules": [
+      {
+        "name": "The Contour Rule",
+        "body": "Keep charcoal contours around the tactile controls and demonstration surfaces. Tonal fields and quieter dividers separate reading content.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Use rounded Fredoka for personality and major actions; keep explanation, metadata and technical detail in Manrope or monospace.",
+        "section": "typography"
+      },
+      {
+        "name": "The Motion Consent Rule",
+        "body": "Keep decorative motion pausable and honor reduced motion without removing the demonstration or its controls.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do preserve the canonical mascot's proportions, mint body, lavender nose, cream eyes and charcoal contours.",
+      "Do keep Fredoka 700 for display and 600 for major controls, with Manrope for readable supporting copy.",
+      "Do use real, version-labeled native screenshots with their recorded provenance.",
+      "Do retain visible focus, selected-state labels, keyboard behavior and reduced-motion handling.",
+      "Do check English and Polish compositions at desktop and mobile widths."
+    ],
+    "donts": [
+      "Don't substitute generated application mockups for real screenshots or add a cursor or system sharing strip to captures.",
+      "Don't recast the clean request ribbon as painted texture or replace the supplied mascot with a geometric reconstruction.",
+      "Don't make color or animation the only way to understand a request, selected tab or mock state.",
+      "Don't promote unused CSS declarations, synthesized tonal ramps or unimplemented component variants into design tokens.",
+      "Don't use em dashes in authored copy or metadata."
+    ]
+  }
+}

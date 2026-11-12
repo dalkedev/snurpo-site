@@ -1,0 +1,1 @@
+{"name":"snurpo-site","version":"1.0.0","private":true,"type":"module","scripts":{"build":"node build.mjs","preview":"python3 -m http.server 57171 --bind 127.0.0.1 --directory dist","check":"node --check app.js && node --check build.mjs"}}

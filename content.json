@@ -1,0 +1,346 @@
+{
+  "schema": 1,
+  "product": "Snurpo",
+  "release": "1.5.0",
+  "notes": {
+    "purpose": "Bilingual content draft only. Root may adapt hierarchy and length to the selected composition.",
+    "section_order": [
+      "hero",
+      "capture",
+      "change",
+      "terminal",
+      "evidence",
+      "download"
+    ],
+    "domain": "Do not assign a canonical domain until ownership and deployment are verified.",
+    "screenshot_versions": "Inspector, rules, replay and analysis captures show 1.4.2. Copy as cURL captures show 1.5.0.",
+    "tone": "Curious, approachable and technically precise. Use the mascot aside sparingly."
+  },
+  "links": {
+    "latest": "https://github.com/dalkedev/snurpo/releases/latest",
+    "release": "https://github.com/dalkedev/snurpo/releases/tag/v1.5.0",
+    "releaseNotes": "https://github.com/dalkedev/snurpo/blob/v1.5.0/docs/releases/1.5.0.md",
+    "source": "https://github.com/dalkedev/snurpo",
+    "docs": "https://github.com/dalkedev/snurpo/blob/main/docs/GETTING_STARTED.md",
+    "rules": "https://github.com/dalkedev/snurpo/blob/main/docs/RULES.md",
+    "curl": "https://github.com/dalkedev/snurpo/blob/v1.5.0/docs/GETTING_STARTED.md#copy-a-request-to-your-terminal",
+    "mcp": "https://github.com/dalkedev/snurpo/blob/main/docs/MCP.md",
+    "search": "https://github.com/dalkedev/snurpo/blob/main/docs/SEARCH.md",
+    "android": "https://github.com/dalkedev/snurpo/blob/main/docs/ANDROID.md",
+    "verification": "https://github.com/dalkedev/snurpo/blob/v1.5.0/docs/VERIFICATION.md",
+    "license": "https://github.com/dalkedev/snurpo/blob/main/LICENSE",
+    "contribute": "https://github.com/dalkedev/snurpo/blob/main/CONTRIBUTING.md",
+    "issues": "https://github.com/dalkedev/snurpo/issues/new/choose",
+    "coffee": "https://buymeacoffee.com/dalkedev",
+    "creator": "https://www.dalkedev.pl/",
+    "checksums": "https://github.com/dalkedev/snurpo/releases/download/v1.5.0/SHA256SUMS.txt",
+    "macos": "https://github.com/dalkedev/snurpo/releases/download/v1.5.0/Snurpo-v1.5.0-macOS-arm64.zip",
+    "windows": "https://github.com/dalkedev/snurpo/releases/download/v1.5.0/Snurpo-v1.5.0-Windows-x64-setup.exe",
+    "linuxAppImage": "https://github.com/dalkedev/snurpo/releases/download/v1.5.0/Snurpo-v1.5.0-Linux-x64.AppImage",
+    "linuxDeb": "https://github.com/dalkedev/snurpo/releases/download/v1.5.0/Snurpo-v1.5.0-Linux-x64.deb"
+  },
+  "en": {
+    "meta": {
+      "title": "Snurpo: A nosy little HTTP debugger",
+      "description": "Capture and inspect HTTP(S) traffic. Mock responses, replay requests, copy as cURL and revisit local sessions with Snurpo, an open-source desktop debugger."
+    },
+    "nav": {
+      "features": "What it does",
+      "download": "Download",
+      "docs": "Documentation",
+      "source": "GitHub",
+      "language": "Language"
+    },
+    "hero": {
+      "tagline": "A nosy little HTTP debugger.",
+      "headline": "Something smells off.\nFollow the request.",
+      "body": "See what your app sends and what its API sends back. Capture HTTP(S), inspect the exchange, then change it and try again.",
+      "primary": "Download Snurpo",
+      "secondary": "Take a closer look",
+      "releaseLabel": "Snurpo 1.5.0",
+      "aside": "Big nose. Specific questions.",
+      "localNote": "Local capture. No account required."
+    },
+    "capture": {
+      "title": "The request is only half the story.",
+      "body": "Follow the whole exchange: URL, headers, body, response and timing. Find the failing calls without losing the surrounding context.",
+      "points": [
+        {
+          "title": "See both sides",
+          "body": "Inspect HTTP and HTTPS requests, responses, repeated headers and text or binary bodies."
+        },
+        {
+          "title": "Find the interesting bit",
+          "body": "Search freely or combine filters for method, status, URL and body."
+        },
+        {
+          "title": "Start with a real capture",
+          "body": "Generate six localhost requests in the app, including a slow response and an intentional sign-in error."
+        }
+      ],
+      "filterExample": "filter: method=POST status>=500",
+      "linkLabel": "Start capturing",
+      "linkKey": "docs",
+      "screenshotCaption": "The native traffic inspector in Snurpo 1.4.2."
+    },
+    "change": {
+      "title": "Make the failure happen on purpose.",
+      "body": "A flaky endpoint is easier to debug when you can control the next response. Match it, return a local mock, or edit and replay a request.",
+      "points": [
+        {
+          "title": "Mock, rewrite or block",
+          "body": "Apply saved rules to matching traffic. The inspector marks mocked responses and keeps the original messages when they change."
+        },
+        {
+          "title": "Pause and inspect",
+          "body": "Stop a request or response at a breakpoint, edit it, then continue."
+        },
+        {
+          "title": "Try again with a change",
+          "body": "Edit the method, URL, headers or body. A replay becomes a new exchange, so the earlier result stays available."
+        }
+      ],
+      "linkLabel": "Explore traffic rules",
+      "linkKey": "rules",
+      "screenshotCaption": "A local rule returns HTTP 503 for a products request. Snurpo 1.4.2.",
+      "demoLabels": {
+        "original": "Original response",
+        "mock": "Mock a 503",
+        "replay": "Replay request",
+        "reset": "Reset example",
+        "example": "Interactive example"
+      }
+    },
+    "terminal": {
+      "title": "Take the request with you.",
+      "body": "Open Copy as cURL, review the command and copy it into your terminal. Keep the captured method, URL, repeated headers and text or binary body.",
+      "action": "See Copy as cURL",
+      "linkKey": "curl",
+      "releaseNote": "New in 1.5.0",
+      "fineprint": "For sh, bash and zsh. Previewing and copying send no traffic. The command can include captured credentials; review it before sharing.",
+      "screenshotCaption": "Copy as cURL in the native Snurpo 1.5.0 app.",
+      "copyLabel": "Copy command",
+      "copiedLabel": "Copied",
+      "copyFailedLabel": "Select the command to copy it manually."
+    },
+    "evidence": {
+      "title": "Keep the evidence. Pick up tomorrow.",
+      "body": "Name a session, add notes and come back to the same exchanges. Saved captures and built-in analysis stay on your computer.",
+      "archive": {
+        "title": "A local archive you can revisit",
+        "body": "Pin useful sessions, compare captures and export HAR or native archives. Follow analysis findings back to the requests behind them."
+      },
+      "mcp": {
+        "title": "An agent can look too. You choose where.",
+        "body": "Connect an MCP client to selected sessions. Grant replay, global rule access or device diagnostics separately when you need them.",
+        "fineprint": "Sharing and permissions reset when Snurpo restarts.",
+        "linkLabel": "Connect an MCP client",
+        "linkKey": "mcp"
+      },
+      "secondaryLink": {
+        "label": "Working with Android?",
+        "detail": "Explore the experimental ADB and optional Frida setup.",
+        "linkKey": "android"
+      }
+    },
+    "download": {
+      "title": "Give your next bug a closer look.",
+      "body": "Download Snurpo 1.5.0. Local capture, saved sessions and export need no account or subscription.",
+      "platforms": [
+        {
+          "id": "macos",
+          "label": "Download for macOS",
+          "detail": "Apple Silicon · ZIP",
+          "linkKey": "macos"
+        },
+        {
+          "id": "windows",
+          "label": "Download for Windows",
+          "detail": "x64 · Installer",
+          "linkKey": "windows"
+        },
+        {
+          "id": "linuxAppImage",
+          "label": "Download for Linux",
+          "detail": "x64 · AppImage",
+          "linkKey": "linuxAppImage"
+        },
+        {
+          "id": "linuxDeb",
+          "label": "Download Debian package",
+          "detail": "Linux x64 · DEB",
+          "linkKey": "linuxDeb"
+        }
+      ],
+      "validationNote": "Native workflows have been exercised on Apple Silicon. Windows and Linux have CI build and headless checks; interactive installers and desktop behavior remain experimental. Intel macOS is unverified.",
+      "macSigningNote": "The macOS app is ad-hoc signed and is not Apple-notarized.",
+      "protocolNote": "Bodies are buffered up to 16 MiB each. Streaming, WebSocket frames and HTTP/3 are not implemented.",
+      "releaseNotesLabel": "Release notes",
+      "checksumsLabel": "Checksums",
+      "sourceLabel": "Build from source"
+    },
+    "footer": {
+      "tagline": "Stay curious.",
+      "project": "An independent open-source project by dalkedev.",
+      "license": "AGPL-3.0-or-later",
+      "source": "Read the code",
+      "contribute": "Help shape Snurpo",
+      "issues": "Report a bug",
+      "coffee": "Buy me a coffee",
+      "coffeeNote": "Support the next curious idea.",
+      "backToTop": "Back to top"
+    }
+  },
+  "pl": {
+    "meta": {
+      "title": "Snurpo: Ciekawski debugger HTTP",
+      "description": "Przechwytuj i analizuj ruch HTTP(S). Mockuj odpowiedzi, ponawiaj requesty, kopiuj jako cURL i wracaj do lokalnych sesji. Poznaj Snurpo, desktopowy debugger open source."
+    },
+    "nav": {
+      "features": "Co potrafi",
+      "download": "Pobierz",
+      "docs": "Dokumentacja",
+      "source": "GitHub",
+      "language": "Język"
+    },
+    "hero": {
+      "tagline": "Ciekawski debugger HTTP.",
+      "headline": "Coś tu nie gra.\nIdź tropem requestu.",
+      "body": "Zobacz, co wysyła Twoja aplikacja i co odsyła API. Przechwyć HTTP(S), sprawdź całą wymianę, zmień szczegół i spróbuj ponownie.",
+      "primary": "Pobierz Snurpo",
+      "secondary": "Przyjrzyj się bliżej",
+      "releaseLabel": "Snurpo 1.5.0",
+      "aside": "Duży nos. Konkretne pytania.",
+      "localNote": "Lokalne przechwytywanie. Bez zakładania konta."
+    },
+    "capture": {
+      "title": "Request to dopiero połowa historii.",
+      "body": "Prześledź całą wymianę: URL, nagłówki, body, odpowiedź i czas. Znajdź nieudane wywołania, zachowując ich kontekst.",
+      "points": [
+        {
+          "title": "Zobacz obie strony",
+          "body": "Sprawdzaj requesty i odpowiedzi HTTP oraz HTTPS, powtarzające się nagłówki i tekstowe lub binarne body."
+        },
+        {
+          "title": "Znajdź to, co istotne",
+          "body": "Szukaj tekstu lub łącz filtry metody, statusu, adresu i body."
+        },
+        {
+          "title": "Zacznij od prawdziwego ruchu",
+          "body": "Wygeneruj w aplikacji sześć requestów do localhosta, w tym wolną odpowiedź i celowy błąd logowania."
+        }
+      ],
+      "filterExample": "filter: method=POST status>=500",
+      "linkLabel": "Zacznij przechwytywać",
+      "linkKey": "docs",
+      "screenshotCaption": "Inspektor ruchu w natywnej aplikacji Snurpo 1.4.2."
+    },
+    "change": {
+      "title": "Wywołaj błąd wtedy, kiedy go potrzebujesz.",
+      "body": "Łatwiej debugować zawodny endpoint, gdy kontrolujesz kolejną odpowiedź. Dopasuj regułę, zwróć lokalny mock albo zmień i ponów request.",
+      "points": [
+        {
+          "title": "Mockuj, zmieniaj lub blokuj",
+          "body": "Stosuj zapisane reguły do pasującego ruchu. Inspektor oznacza odpowiedzi z mocków i zachowuje oryginały zmienionych wiadomości."
+        },
+        {
+          "title": "Zatrzymaj i sprawdź",
+          "body": "Zatrzymaj request lub odpowiedź na breakpoincie, wprowadź zmianę i kontynuuj."
+        },
+        {
+          "title": "Zmień szczegół i ponów",
+          "body": "Edytuj metodę, URL, nagłówki lub body. Ponowienie zapisuje się jako nowa wymiana, więc wcześniejszy wynik zostaje."
+        }
+      ],
+      "linkLabel": "Poznaj reguły ruchu",
+      "linkKey": "rules",
+      "screenshotCaption": "Lokalna reguła zwraca HTTP 503 dla requestu o produkty. Snurpo 1.4.2.",
+      "demoLabels": {
+        "original": "Oryginalna odpowiedź",
+        "mock": "Ustaw mock 503",
+        "replay": "Ponów request",
+        "reset": "Zacznij od nowa",
+        "example": "Interaktywny przykład"
+      }
+    },
+    "terminal": {
+      "title": "Zabierz request ze sobą.",
+      "body": "Otwórz Copy as cURL, sprawdź komendę i skopiuj ją do terminala. Zachowaj metodę, URL, powtarzające się nagłówki oraz tekstowe lub binarne body.",
+      "action": "Zobacz Copy as cURL",
+      "linkKey": "curl",
+      "releaseNote": "Nowość w 1.5.0",
+      "fineprint": "Dla sh, bash i zsh. Podgląd i kopiowanie nie wysyłają ruchu. Komenda może zawierać przechwycone dane uwierzytelniające; sprawdź ją przed udostępnieniem.",
+      "screenshotCaption": "Copy as cURL w natywnej aplikacji Snurpo 1.5.0.",
+      "copyLabel": "Kopiuj komendę",
+      "copiedLabel": "Skopiowano",
+      "copyFailedLabel": "Zaznacz komendę i skopiuj ją ręcznie."
+    },
+    "evidence": {
+      "title": "Zachowaj wyniki. Wróć do nich jutro.",
+      "body": "Nazwij sesję, dodaj notatki i wróć do tych samych requestów. Zapisany ruch i wbudowana analiza pozostają na Twoim komputerze.",
+      "archive": {
+        "title": "Lokalne archiwum, do którego możesz wrócić",
+        "body": "Przypinaj przydatne sesje, porównuj zapisany ruch i eksportuj HAR lub archiwa natywne. Przechodź z obserwacji w analizie do konkretnych requestów."
+      },
+      "mcp": {
+        "title": "Agent też może zajrzeć. Ty wybierasz gdzie.",
+        "body": "Podłącz klienta MCP do wybranych sesji. Osobno zezwól na ponawianie requestów, dostęp do globalnych reguł lub diagnostykę urządzeń, gdy tego potrzebujesz.",
+        "fineprint": "Udostępnianie i uprawnienia resetują się po ponownym uruchomieniu Snurpo.",
+        "linkLabel": "Podłącz klienta MCP",
+        "linkKey": "mcp"
+      },
+      "secondaryLink": {
+        "label": "Pracujesz z Androidem?",
+        "detail": "Poznaj eksperymentalną konfigurację ADB i opcjonalnej Fridy.",
+        "linkKey": "android"
+      }
+    },
+    "download": {
+      "title": "Przyjrzyj się kolejnemu bugowi z bliska.",
+      "body": "Pobierz Snurpo 1.5.0. Lokalne przechwytywanie, zapis sesji i eksport nie wymagają konta ani subskrypcji.",
+      "platforms": [
+        {
+          "id": "macos",
+          "label": "Pobierz na macOS",
+          "detail": "Apple Silicon · ZIP",
+          "linkKey": "macos"
+        },
+        {
+          "id": "windows",
+          "label": "Pobierz na Windows",
+          "detail": "x64 · Instalator",
+          "linkKey": "windows"
+        },
+        {
+          "id": "linuxAppImage",
+          "label": "Pobierz na Linux",
+          "detail": "x64 · AppImage",
+          "linkKey": "linuxAppImage"
+        },
+        {
+          "id": "linuxDeb",
+          "label": "Pobierz pakiet Debian",
+          "detail": "Linux x64 · DEB",
+          "linkKey": "linuxDeb"
+        }
+      ],
+      "validationNote": "Natywne scenariusze sprawdzono na Apple Silicon. Windows i Linux mają testy budowania oraz testy bez interfejsu w CI; instalatory i interaktywna obsługa pozostają eksperymentalne. Intel macOS nie jest zweryfikowany.",
+      "macSigningNote": "Aplikacja macOS ma podpis ad-hoc i nie ma notaryzacji Apple.",
+      "protocolNote": "Body są buforowane do 16 MiB każde. Streaming, ramki WebSocket i HTTP/3 nie są zaimplementowane.",
+      "releaseNotesLabel": "Informacje o wydaniu",
+      "checksumsLabel": "Sumy kontrolne",
+      "sourceLabel": "Zbuduj ze źródeł"
+    },
+    "footer": {
+      "tagline": "Zachowaj ciekawość.",
+      "project": "Niezależny projekt open source od dalkedev.",
+      "license": "AGPL-3.0-or-later",
+      "source": "Zajrzyj do kodu",
+      "contribute": "Rozwijaj Snurpo",
+      "issues": "Zgłoś błąd",
+      "coffee": "Postaw mi kawę",
+      "coffeeNote": "Wesprzyj kolejny ciekawy pomysł.",
+      "backToTop": "Wróć na górę"
+    }
+  }
+}

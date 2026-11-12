@@ -1,0 +1,231 @@
+{
+  "assets": [
+    {
+      "file": "mascot.webp",
+      "source": "/Users/dalke/Documents/Codex/2026-11-11/chce/outputs/snurpo-brand/snurpo-mascot.png",
+      "sourceSha256": "8b3727c25cf1db2397d70b7a6311e1375979270965e5a75c3dfe7542a9de3177",
+      "sourceVersion": null,
+      "origin": "Original generated Snurpo mascot with native transparency. Mint creature, lavender nose, cream eyes, charcoal outlines. Existing brand artwork; no new generation or artwork edits.",
+      "transform": {
+        "format": "webp",
+        "width": 1000,
+        "quality": 90,
+        "alphaQuality": 100,
+        "crop": false,
+        "retouch": false
+      },
+      "embeddedOrigin": "Sourced asset. Origin: /Users/dalke/Documents/Codex/2026-11-11/chce/outputs/snurpo-brand/snurpo-mascot.png. Source SHA-256: 8b3727c25cf1db2397d70b7a6311e1375979270965e5a75c3dfe7542a9de3177. Original generated Snurpo mascot with native transparency. Mint creature, lavender nose, cream eyes, charcoal outlines. Existing brand artwork; no new generation or artwork edits. Conversion: cwebp, width 1000px, quality 90, alpha quality 100; full frame preserved.",
+      "dimensions": [
+        1000,
+        1000
+      ],
+      "channels": "srgba",
+      "opaque": false,
+      "bytes": 62654,
+      "sha256": "04ff31485fa2f8d700be8c72ced35e88d1a6b7c3f264f5b293488c9ceb7273b6",
+      "provenanceStorage": "mascot.webp.json"
+    },
+    {
+      "file": "mocked-response.webp",
+      "source": "/Users/dalke/Documents/Codex/2026-11-11/chce/outputs/snurpo/docs/images/snurpo/mocked-response.jpg",
+      "sourceSha256": "06e077f7c6fa9c92c6d308b69f062d55c43e822dcf3ba3d256b54c9c6a0e7435",
+      "sourceVersion": "1.4.2",
+      "origin": "Real native macOS Snurpo 1.4.2 screenshot of an isolated localhost capture. Original image has no pointer or system title/sharing strip. Web export is resize and format conversion only; not a generated UI or synthetic app mockup. The captured traffic is synthetic local fixture data.",
+      "transform": {
+        "format": "webp",
+        "width": 1800,
+        "quality": 85,
+        "alphaQuality": 100,
+        "crop": false,
+        "retouch": false
+      },
+      "embeddedOrigin": "Sourced asset. Origin: /Users/dalke/Documents/Codex/2026-11-11/chce/outputs/snurpo/docs/images/snurpo/mocked-response.jpg. Source SHA-256: 06e077f7c6fa9c92c6d308b69f062d55c43e822dcf3ba3d256b54c9c6a0e7435. Real native macOS Snurpo 1.4.2 screenshot of an isolated localhost capture. Original image has no pointer or system title/sharing strip. Web export is resize and format conversion only; not a generated UI or synthetic app mockup. The captured traffic is synthetic local fixture data. Conversion: cwebp, width 1800px, quality 85, alpha quality 100; full frame preserved.",
+      "dimensions": [
+        1800,
+        1130
+      ],
+      "channels": "srgb",
+      "opaque": false,
+      "bytes": 50390,
+      "sha256": "1d42c843af89f5288793e58cc391c5177518f3d5751f23a07072911288441dc5",
+      "provenanceStorage": "mocked-response.webp.json"
+    },
+    {
+      "file": "traffic-inspector.webp",
+      "source": "/Users/dalke/Documents/Codex/2026-11-11/chce/outputs/snurpo/docs/images/snurpo/traffic-inspector.jpg",
+      "sourceSha256": "f0ab1b11fe58941181edb2c75d27f8678521b5c9134785e24c7d6b8d612c9de6",
+      "sourceVersion": "1.4.2",
+      "origin": "Real native macOS Snurpo 1.4.2 screenshot of an isolated localhost capture. Original image has no pointer or system title/sharing strip. Web export is resize and format conversion only; not a generated UI or synthetic app mockup. The captured traffic is synthetic local fixture data.",
+      "transform": {
+        "format": "webp",
+        "width": 1800,
+        "quality": 85,
+        "alphaQuality": 100,
+        "crop": false,
+        "retouch": false
+      },
+      "embeddedOrigin": "Sourced asset. Origin: /Users/dalke/Documents/Codex/2026-11-11/chce/outputs/snurpo/docs/images/snurpo/traffic-inspector.jpg. Source SHA-256: f0ab1b11fe58941181edb2c75d27f8678521b5c9134785e24c7d6b8d612c9de6. Real native macOS Snurpo 1.4.2 screenshot of an isolated localhost capture. Original image has no pointer or system title/sharing strip. Web export is resize and format conversion only; not a generated UI or synthetic app mockup. The captured traffic is synthetic local fixture data. Conversion: cwebp, width 1800px, quality 85, alpha quality 100; full frame preserved.",
+      "dimensions": [
+        1800,
+        1130
+      ],
+      "channels": "srgb",
+      "opaque": false,
+      "bytes": 52188,
+      "sha256": "d7f6cb4ba0f50b53619d448c8cf2d3ee137d3a45eb02e8d833e2ecca1fe00f78",
+      "provenanceStorage": "traffic-inspector.webp.json"
+    },
+    {
+      "file": "replay-composer.webp",
+      "source": "/Users/dalke/Documents/Codex/2026-11-11/chce/outputs/snurpo/docs/images/snurpo/replay-composer.jpg",
+      "sourceSha256": "44365c8e1f26ae46019e35ba292d7a4a55cf62f09e9351310c070c32899acbac",
+      "sourceVersion": "1.4.2",
+      "origin": "Real native macOS Snurpo 1.4.2 screenshot of an isolated localhost capture. Original image has no pointer or system title/sharing strip. Web export is resize and format conversion only; not a generated UI or synthetic app mockup. The captured traffic is synthetic local fixture data.",
+      "transform": {
+        "format": "webp",
+        "width": 1800,
+        "quality": 85,
+        "alphaQuality": 100,
+        "crop": false,
+        "retouch": false
+      },
+      "embeddedOrigin": "Sourced asset. Origin: /Users/dalke/Documents/Codex/2026-11-11/chce/outputs/snurpo/docs/images/snurpo/replay-composer.jpg. Source SHA-256: 44365c8e1f26ae46019e35ba292d7a4a55cf62f09e9351310c070c32899acbac. Real native macOS Snurpo 1.4.2 screenshot of an isolated localhost capture. Original image has no pointer or system title/sharing strip. Web export is resize and format conversion only; not a generated UI or synthetic app mockup. The captured traffic is synthetic local fixture data. Conversion: cwebp, width 1800px, quality 85, alpha quality 100; full frame preserved.",
+      "dimensions": [
+        1800,
+        1130
+      ],
+      "channels": "srgb",
+      "opaque": false,
+      "bytes": 26162,
+      "sha256": "e8f04445fcea97a65454dfc4494e7c33a7bdc077603139570b78ad955e3c701d",
+      "provenanceStorage": "replay-composer.webp.json"
+    },
+    {
+      "file": "traffic-rules.webp",
+      "source": "/Users/dalke/Documents/Codex/2026-11-11/chce/outputs/snurpo/docs/images/snurpo/traffic-rules.jpg",
+      "sourceSha256": "a5e3746c449bb01e794772066797491db0582d801c97ab76ddb8163f3291934e",
+      "sourceVersion": "1.4.2",
+      "origin": "Real native macOS Snurpo 1.4.2 screenshot of an isolated localhost capture. Original image has no pointer or system title/sharing strip. Web export is resize and format conversion only; not a generated UI or synthetic app mockup. The captured traffic is synthetic local fixture data.",
+      "transform": {
+        "format": "webp",
+        "width": 1800,
+        "quality": 85,
+        "alphaQuality": 100,
+        "crop": false,
+        "retouch": false
+      },
+      "embeddedOrigin": "Sourced asset. Origin: /Users/dalke/Documents/Codex/2026-11-11/chce/outputs/snurpo/docs/images/snurpo/traffic-rules.jpg. Source SHA-256: a5e3746c449bb01e794772066797491db0582d801c97ab76ddb8163f3291934e. Real native macOS Snurpo 1.4.2 screenshot of an isolated localhost capture. Original image has no pointer or system title/sharing strip. Web export is resize and format conversion only; not a generated UI or synthetic app mockup. The captured traffic is synthetic local fixture data. Conversion: cwebp, width 1800px, quality 85, alpha quality 100; full frame preserved.",
+      "dimensions": [
+        1800,
+        1130
+      ],
+      "channels": "srgb",
+      "opaque": false,
+      "bytes": 47426,
+      "sha256": "a91460c4b8c9f5300f7cbd27ba8fb57d7b2994cd62e01b2e469c7a07b4d8fb75",
+      "provenanceStorage": "traffic-rules.webp.json"
+    },
+    {
+      "file": "session-analysis.webp",
+      "source": "/Users/dalke/Documents/Codex/2026-11-11/chce/outputs/snurpo/docs/images/snurpo/session-analysis.jpg",
+      "sourceSha256": "81c8c658300c5a37ee9b7a453926537f548efdb2eefd8e434145dce3bdf0d272",
+      "sourceVersion": "1.4.2",
+      "origin": "Real native macOS Snurpo 1.4.2 screenshot of an isolated localhost capture. Original image has no pointer or system title/sharing strip. Web export is resize and format conversion only; not a generated UI or synthetic app mockup. The captured traffic is synthetic local fixture data.",
+      "transform": {
+        "format": "webp",
+        "width": 1800,
+        "quality": 85,
+        "alphaQuality": 100,
+        "crop": false,
+        "retouch": false
+      },
+      "embeddedOrigin": "Sourced asset. Origin: /Users/dalke/Documents/Codex/2026-11-11/chce/outputs/snurpo/docs/images/snurpo/session-analysis.jpg. Source SHA-256: 81c8c658300c5a37ee9b7a453926537f548efdb2eefd8e434145dce3bdf0d272. Real native macOS Snurpo 1.4.2 screenshot of an isolated localhost capture. Original image has no pointer or system title/sharing strip. Web export is resize and format conversion only; not a generated UI or synthetic app mockup. The captured traffic is synthetic local fixture data. Conversion: cwebp, width 1800px, quality 85, alpha quality 100; full frame preserved.",
+      "dimensions": [
+        1800,
+        1130
+      ],
+      "channels": "srgb",
+      "opaque": false,
+      "bytes": 51778,
+      "sha256": "d469f3e1b455de1cd600fa2faa448b27ee0ff227d8146ba877491060d6702b1d",
+      "provenanceStorage": "session-analysis.webp.json"
+    },
+    {
+      "file": "copy-as-curl.webp",
+      "source": "/Users/dalke/Documents/Codex/2026-11-11/chce/outputs/snurpo-screenshots/v1.5.0/01-copy-as-curl-dark.jpg",
+      "sourceSha256": "37037169a4faec94fda858374f6f7a93ec30125a6e323731b82e6335b1308bf4",
+      "sourceVersion": "1.5.0",
+      "origin": "Real native macOS Snurpo 1.5.0 source-build screenshot, commit b11bddb492611b73154ff758697544b8cc62041e. Copy as cURL preview with successful clipboard feedback. Original image has no pointer or system title/sharing strip. Web export is resize and format conversion only; not a generated UI or synthetic app mockup. The captured traffic is synthetic local fixture data.",
+      "transform": {
+        "format": "webp",
+        "width": 1800,
+        "quality": 85,
+        "alphaQuality": 100,
+        "crop": false,
+        "retouch": false
+      },
+      "embeddedOrigin": "Sourced asset. Origin: /Users/dalke/Documents/Codex/2026-11-11/chce/outputs/snurpo-screenshots/v1.5.0/01-copy-as-curl-dark.jpg. Source SHA-256: 37037169a4faec94fda858374f6f7a93ec30125a6e323731b82e6335b1308bf4. Real native macOS Snurpo 1.5.0 source-build screenshot, commit b11bddb492611b73154ff758697544b8cc62041e. Copy as cURL preview with successful clipboard feedback. Original image has no pointer or system title/sharing strip. Web export is resize and format conversion only; not a generated UI or synthetic app mockup. The captured traffic is synthetic local fixture data. Conversion: cwebp, width 1800px, quality 85, alpha quality 100; full frame preserved.",
+      "dimensions": [
+        1800,
+        1130
+      ],
+      "channels": "srgb",
+      "opaque": false,
+      "bytes": 41564,
+      "sha256": "593b68441dc228694a5dd4fcc5a60c414855eddd41dfcc4222fb58f7f4e42929",
+      "provenanceStorage": "copy-as-curl.webp.json"
+    },
+    {
+      "file": "favicon.png",
+      "source": "/Users/dalke/Documents/Codex/2026-11-11/chce/outputs/snurpo/assets/brand/snurpo-ui.png",
+      "sourceSha256": "c6f762fa6a14343ef083876e2efa8da1ede98a67e897eb2c61ea0d6cd0dad0cb",
+      "sourceVersion": null,
+      "origin": "Existing 128px transparent Snurpo UI icon from the canonical brand assets.",
+      "transform": {
+        "format": "png",
+        "width": 128,
+        "crop": false,
+        "retouch": false,
+        "pixels": "unchanged"
+      },
+      "embeddedOrigin": "Sourced asset. Origin: /Users/dalke/Documents/Codex/2026-11-11/chce/outputs/snurpo/assets/brand/snurpo-ui.png. Source SHA-256: c6f762fa6a14343ef083876e2efa8da1ede98a67e897eb2c61ea0d6cd0dad0cb. Existing 128x128 Snurpo UI icon, technically exported from the original generated mascot by the locked Tauri icon tool. Copied pixels unchanged; only provenance metadata added.",
+      "dimensions": [
+        128,
+        128
+      ],
+      "channels": "srgba",
+      "opaque": false,
+      "bytes": 19453,
+      "sha256": "ba9469c606408b518209c53e5fa357fa680a41d2c7e17a7774cb40f3343f338f",
+      "provenanceStorage": "png tEXt"
+    },
+    {
+      "file": "social-card.png",
+      "source": "/Users/dalke/Documents/Codex/2026-11-11/chce/outputs/snurpo-brand/snurpo-banner.png",
+      "sourceSha256": "e7efeb56303f79870f3e93f8265bc7f4f4f65ffefaf602050253470abf50b604",
+      "sourceVersion": null,
+      "origin": "Original generated brand illustration, not an application screenshot. Existing banner retained with proportional resize only.",
+      "transform": {
+        "format": "png",
+        "width": 1200,
+        "height": 600,
+        "crop": false,
+        "retouch": false
+      },
+      "embeddedOrigin": "Sourced asset. Origin: /Users/dalke/Documents/Codex/2026-11-11/chce/outputs/snurpo-brand/snurpo-banner.png. Source SHA-256: e7efeb56303f79870f3e93f8265bc7f4f4f65ffefaf602050253470abf50b604. Original generated Snurpo brand banner, 1774x887, retained as brand illustration and not an application screenshot. Delivery derivative resized proportionally to 1200x600. Full frame preserved with no crop, content alteration or retouching.",
+      "dimensions": [
+        1200,
+        600
+      ],
+      "channels": "srgb",
+      "opaque": true,
+      "bytes": 817850,
+      "sha256": "b5d20451d40d4b21d9829ba92ab88beb56464856ae7d89a90165ea27300d7ed8",
+      "provenanceStorage": "png tEXt"
+    }
+  ],
+  "prepared": "2026-11-12",
+  "license": "AGPL-3.0-or-later",
+  "scope": "Web delivery derivatives of existing canonical artwork and native screenshots. Originals untouched. No cropping, cursor removal, retouching or new generated app imagery.",
+  "metadata": "impeccable embed-prompt embeds PNG tEXt; WebP uses the tool's .webp.json sidecar fallback. Keep those sidecars beside the rasters."
+}
