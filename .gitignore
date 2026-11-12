@@ -3,3 +3,6 @@
 !.impeccable/design.json
 !.impeccable/surfaces/
 site-artifact.tar.gz
+.vercel/
+.env*
+.openai/

@@ -25,12 +25,20 @@ Rebuild after source changes. Only `dist/` is served. Example requests are local
 
 ## Hosting
 
-The source uses Sites hosting. `.openai/hosting.json` preserves its project identity. It can also be deployed as static output using `node build.mjs` and output directory `dist`.
+This source is prepared for migration from Sites to the public GitHub repository `dalkedev/snurpo-site` and Vercel. The existing Sites deployment remains available as a fallback until the Vercel deployment and domain cutover are verified. Repository creation, the Vercel connection and DNS cutover are separate from these source changes.
+
+Import the repository into Vercel with the **Other** framework preset and repository root as the project directory. `vercel.json` sets `npm run build`, the `dist` output directory and trailing-slash URLs, preserving `/pl/`. No environment variables or runtime services are required. Browser caching is limited to one day for assets and one week for fonts; filenames are not treated as immutable. Node.js is not pinned in this repository.
+
+The former Sites project metadata is excluded from this public source. Local Vercel project metadata and `.env` files are also ignored. Generated HTML and `dist/` remain tracked for now; rebuild before committing source edits.
 
 The canonical origin is `https://snurpo.dev`: English at `/`, Polish at `/pl/`. The build generates absolute canonical, language-alternate and social-image URLs, permits crawling in `robots.txt`, and lists both language routes in `/sitemap.xml`. Submit `https://snurpo.dev/sitemap.xml` to Google Search Console after the domain is verified. Both hostnames use apex canonical URLs; redirect and TLS configuration are hosting concerns.
 
 Downloads currently target verified release 1.5.0. Update `content.json` when releasing a newer app. Screenshot captions must retain the version actually pictured.
 
+## License
+
+The website source and Snurpo artwork are available under **AGPL-3.0-or-later**; see [LICENSE](LICENSE) and [asset provenance](assets/provenance.json). The bundled Fredoka and Manrope fonts retain their separate SIL Open Font License notices in [fonts/fredoka-LICENSE.txt](fonts/fredoka-LICENSE.txt) and [fonts/manrope-LICENSE.txt](fonts/manrope-LICENSE.txt).
+
 ## Verification
 
-JavaScript syntax and static route/asset/anchor checks passed. Browser interactions were exercised through CUA at desktop and mobile sizes, in both languages. See `.impeccable/review/verification.md` for the local evidence and limits. The final design review and design-system files are retained with the working source.
+Run `npm run check` and `npm run build` before deployment. JavaScript syntax and static route/asset/anchor checks passed during migration preparation. Browser interactions were exercised through CUA at desktop and mobile sizes, in both languages. Local browser evidence and its limits are retained in the ignored `.impeccable/review/` directory; the public repository retains `DESIGN.md` and `.impeccable/design.json`.
