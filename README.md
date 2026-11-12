@@ -25,9 +25,9 @@ Rebuild after source changes. Only `dist/` is served. Example requests are local
 
 ## Hosting
 
-This initial build uses an owner-private Sites deployment. `.openai/hosting.json` preserves its project identity. It can also be deployed as static output using `node build.mjs` and output directory `dist`.
+The source uses Sites hosting. `.openai/hosting.json` preserves its project identity. It can also be deployed as static output using `node build.mjs` and output directory `dist`.
 
-Before connecting a confirmed public domain, update social image URLs, add canonical and absolute hreflang links for both routes, enable crawling in `robots.txt`, and generate a sitemap for that domain. No ownership of snurpo.dev is assumed here.
+The canonical origin is `https://snurpo.dev`: English at `/`, Polish at `/pl/`. The build generates absolute canonical, language-alternate and social-image URLs, permits crawling in `robots.txt`, and lists both language routes in `/sitemap.xml`. Submit `https://snurpo.dev/sitemap.xml` to Google Search Console after the domain is verified. Both hostnames use apex canonical URLs; redirect and TLS configuration are hosting concerns.
 
 Downloads currently target verified release 1.5.0. Update `content.json` when releasing a newer app. Screenshot captions must retain the version actually pictured.
 

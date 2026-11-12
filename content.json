@@ -12,7 +12,7 @@
       "evidence",
       "download"
     ],
-    "domain": "Do not assign a canonical domain until ownership and deployment are verified.",
+    "domain": "Use https://snurpo.dev as the canonical origin for the English and Polish routes.",
     "screenshot_versions": "Inspector, rules, replay and analysis captures show 1.4.2. Copy as cURL captures show 1.5.0.",
     "tone": "Curious, approachable and technically precise. Use the mascot aside sparingly."
   },
