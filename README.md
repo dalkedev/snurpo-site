@@ -25,13 +25,13 @@ Rebuild after source changes. Only `dist/` is served. Example requests are local
 
 ## Hosting
 
-This source is prepared for migration from Sites to the public GitHub repository `dalkedev/snurpo-site` and Vercel. The existing Sites deployment remains available as a fallback until the Vercel deployment and domain cutover are verified. Repository creation, the Vercel connection and DNS cutover are separate from these source changes.
+The public source lives in [dalkedev/snurpo-site](https://github.com/dalkedev/snurpo-site). Production is hosted by the [snurpo-site project on Vercel](https://vercel.com/sculpttechprojects-projects/snurpo-site), with automatic deployments from `main`. The domain is registered at OVH, which also manages DNS. The previous Sites deployment is retained temporarily during DNS propagation.
 
-Import the repository into Vercel with the **Other** framework preset and repository root as the project directory. `vercel.json` sets `npm run build`, the `dist` output directory and trailing-slash URLs, preserving `/pl/`. No environment variables or runtime services are required. Browser caching is limited to one day for assets and one week for fonts; filenames are not treated as immutable. Node.js is not pinned in this repository.
+Vercel uses the **Other** framework preset and repository root as the project directory. `vercel.json` sets `npm run build`, the `dist` output directory and trailing-slash URLs, preserving `/pl/`. No environment variables or runtime services are required. Browser caching is limited to one day for assets and one week for fonts; filenames are not treated as immutable. The current Vercel build uses Node.js 26; the repository does not pin a Node version.
 
-The former Sites project metadata is excluded from this public source. Local Vercel project metadata and `.env` files are also ignored. Generated HTML and `dist/` remain tracked for now; rebuild before committing source edits.
+The former Sites project metadata has been removed from the current source tree. Local Vercel project metadata and `.env` files are also ignored. Generated HTML and `dist/` remain tracked for now; rebuild before committing source edits.
 
-The canonical origin is `https://snurpo.dev`: English at `/`, Polish at `/pl/`. The build generates absolute canonical, language-alternate and social-image URLs, permits crawling in `robots.txt`, and lists both language routes in `/sitemap.xml`. Submit `https://snurpo.dev/sitemap.xml` to Google Search Console after the domain is verified. Both hostnames use apex canonical URLs; redirect and TLS configuration are hosting concerns.
+The canonical origin is `https://snurpo.dev`: English at `/`, Polish at `/pl/`. The build generates absolute canonical, language-alternate and social-image URLs, permits crawling in `robots.txt`, and lists both language routes in `/sitemap.xml`. The domain is verified in Google Search Console, with `https://snurpo.dev/sitemap.xml` submitted for both language routes. Both hostnames use apex canonical URLs; redirect and TLS configuration are hosting concerns.
 
 Downloads currently target verified release 1.5.0. Update `content.json` when releasing a newer app. Screenshot captions must retain the version actually pictured.
 
