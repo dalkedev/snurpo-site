@@ -294,3 +294,22 @@ With reduced motion, CSS disables animations and transitions, restores automatic
 - **Don't** make color or animation the only way to understand a request, selected tab or mock state.
 - **Don't** promote unused CSS declarations, synthesized tonal ramps or unimplemented component variants into design tokens.
 - **Don't** use em dashes in authored copy or metadata.
+
+
+## Documentation: the field guide
+
+The landing page invites curiosity; the guide follows one request through the real app. Keep the familiar mint creature and lavender nose, then give the actual instructions a quiet, readable workspace.
+
+Palette: cream #fff9ee canvas, paper #fffdf7 article, ink #29252b text, lavender #e6c7f8 section markers, mint #a5edc4 current navigation, violet #6b248d focus and links. Fredoka carries the wordmark and headings; Manrope carries instructions and navigation; system monospace carries commands.
+
+A compact header holds the mascot wordmark, Docs, search and download. On desktop, a stable left guide index frames the article and a small right outline follows its headings. Mobile turns the index into an explicit browse control. One mascot peeks over the introduction's guide label; no autonomous animation competes with reading.
+
+```
+mascot + snurpo / Docs           Search the guide      Download
+Guide chapters     |  Current page / version       | On this page
+                   |  Title and next useful step  | Heading links
+                   |  Instructions + real capture |
+                   |  Previous / Next             |
+```
+
+The guide stays left aligned, with a reading width below 80 characters. Code blocks have working copy buttons; headings have stable deep links. Local search supports keyboard access, mobile navigation works without JavaScript, and content is rendered statically for indexing. The same mint selected state and charcoal outlines belong to Snurpo's existing identity; ordinary documentation remains visually restrained.

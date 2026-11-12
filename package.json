@@ -6,7 +6,9 @@
   "scripts": {
     "build": "node build.mjs",
     "preview": "python3 -m http.server 57171 --bind 127.0.0.1 --directory dist",
-    "check": "node --check app.js && node --check build.mjs"
+    "check": "node --check app.js && node --check build.mjs && node --check docs-ui/docs.js && node scripts/check-docs.mjs",
+    "test:docs": "node --test scripts/build-docs.test.mjs",
+    "build:docs": "node scripts/build-docs.mjs"
   },
   "license": "AGPL-3.0-or-later"
 }

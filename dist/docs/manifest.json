@@ -1,0 +1,92 @@
+{
+  "version": "Snurpo 1.5.0",
+  "updated": "2026-11-12",
+  "origin": "https://snurpo.dev",
+  "source": "dalkedev/snurpo/docs/website",
+  "pages": [
+    {
+      "slug": "",
+      "source": "introduction.md",
+      "sourceHash": "4a0ba4829b7311e9aa5bbc6d75b5f38dad4233a2ec34397a57a99a82a2557108",
+      "htmlHash": "ddc468154e565e4edd944ac069a38d38105921f817d8f587c356c349bf5bd95f"
+    },
+    {
+      "slug": "installation",
+      "source": "installation.md",
+      "sourceHash": "96094ba1db6e4db799c08cd31807bf527fa891a32790bdc433731420e083f6f2",
+      "htmlHash": "127b93b6f201354003d757d5465fb3cc2399c25892a1c52eb408fbc20b149a0a"
+    },
+    {
+      "slug": "first-capture",
+      "source": "first-capture.md",
+      "sourceHash": "6a098934aa31d34c4a4a2bf9050a48db285683a599b1612b09d9c0ede9f87e86",
+      "htmlHash": "c805980d835e342c4340b72b4f927d80f6e3927c52ba436c5485d95732bb255d"
+    },
+    {
+      "slug": "https",
+      "source": "https.md",
+      "sourceHash": "3b0c9f8b7408af64dc48a9221e4789ad4afd09d489f278d777c519af26cd0707",
+      "htmlHash": "8c1daafc9d4bb8b33460239ac1ac9b5f1c59f2bc7dcbd7a5576aaf906e89f4f0"
+    },
+    {
+      "slug": "inspect-and-search",
+      "source": "inspect-and-search.md",
+      "sourceHash": "e53c6c100e90d0cf9a9d55c2d3c87fb5c3a06c741f0f1b0f7a517dcb0b3376a7",
+      "htmlHash": "afe2ed46ba93fb46a3cf08d36da597b0d82b1bca54f17ca37405a6ecc16e51d7"
+    },
+    {
+      "slug": "rules-breakpoints",
+      "source": "rules-breakpoints.md",
+      "sourceHash": "122b18bf64f8865c9f4c7c28a97d7a7c4b8dfdba5d5e712fedbc20438cc4ffae",
+      "htmlHash": "dd8af6ebadb714d6f79aa82b4670ccdc8471b43627bf42a1ceb83c51768fc10d"
+    },
+    {
+      "slug": "replay-curl",
+      "source": "replay-curl.md",
+      "sourceHash": "71208ac53c72e38d13a63afc4ada0a3a9308428890889f16742ec1c3725724a2",
+      "htmlHash": "9c8b57a9f074bcf06b9b616534fff4a2c618cb2b1fe50afdf74d6f105ac92f78"
+    },
+    {
+      "slug": "sessions-export",
+      "source": "sessions-export.md",
+      "sourceHash": "b3f257feb0417879a2c4b42fc7ecba7d6e1360c06ac3c7044db2a98bbd3465c6",
+      "htmlHash": "a65297016403b80795f962825abf2c13e2eaf60523a5746b0c796ebb81c92a9b"
+    },
+    {
+      "slug": "analysis",
+      "source": "analysis.md",
+      "sourceHash": "83743f12d8932f577ac978765c6398d57cc2e5e97310f17c1b510be10afc4780",
+      "htmlHash": "40838c4e96a6f30cb3cc7aef8c870165b0f1b10dbc69d3a79f0e607d05612e89"
+    },
+    {
+      "slug": "mcp",
+      "source": "mcp.md",
+      "sourceHash": "fdf85c01f4c6851c46b0fdbcf0cd8b4f951054c6c48e5eba01eda26f189ba54a",
+      "htmlHash": "5afee4003605e9c5eeeb91cf1db3b1244119cc169e65b0b2619b324408b2aab9"
+    },
+    {
+      "slug": "android",
+      "source": "android.md",
+      "sourceHash": "b100429d175a9fee1ebe8e014fc99f906cf8ca0f489bc45a76063a236c22b872",
+      "htmlHash": "9b8db8754ce5a088bd66de2a4f7b8821f597a7777f60003bb65c8244c5b4145e"
+    },
+    {
+      "slug": "har-compare-ci",
+      "source": "har-compare-ci.md",
+      "sourceHash": "dfc8d4556885adc285baec8f0b65ce13ec1cbdc4f39fa133323003872c9b4c9a",
+      "htmlHash": "36fad719010adcb5442f113f96ca9b393df5c79d2dfb91d522f4d9840792fa33"
+    },
+    {
+      "slug": "troubleshooting",
+      "source": "troubleshooting.md",
+      "sourceHash": "ddeecad4e2e56252314ae6091f146d89b7a31651bd58decb8dc889c1f2edb33b",
+      "htmlHash": "d27bd01167728cfe61286e4d2c040f6ff1c8114c64cb78ce0cdf8c063f27b2f2"
+    },
+    {
+      "slug": "releases",
+      "source": "releases.md",
+      "sourceHash": "517bbaa364630529a34a74a718954a2c1579811331e035fd24572d4603f883dd",
+      "htmlHash": "5831392e89910fbb6cdb37ac92fb0730a6e5b69aadac9ab2da27c0941aa23bec"
+    }
+  ]
+}
