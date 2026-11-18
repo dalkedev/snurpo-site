@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "product": "Snurpo",
-  "release": "1.5.0",
+  "release": "1.5.1",
   "notes": {
     "purpose": "Bilingual content draft only. Root may adapt hierarchy and length to the selected composition.",
     "section_order": [
@@ -18,7 +18,7 @@
   },
   "links": {
     "latest": "https://github.com/dalkedev/snurpo/releases/latest",
-    "release": "https://github.com/dalkedev/snurpo/releases/tag/v1.5.0",
+    "release": "https://github.com/dalkedev/snurpo/releases/tag/v1.5.1",
     "releaseNotes": "/docs/releases/",
     "source": "https://github.com/dalkedev/snurpo",
     "docs": "/docs/",
@@ -29,17 +29,17 @@
     "mcp": "/docs/mcp/",
     "search": "/docs/inspect-and-search/",
     "android": "/docs/android/",
-    "verification": "https://github.com/dalkedev/snurpo/blob/v1.5.0/docs/VERIFICATION.md",
+    "verification": "https://github.com/dalkedev/snurpo/blob/v1.5.1/docs/VERIFICATION.md",
     "license": "https://github.com/dalkedev/snurpo/blob/main/LICENSE",
     "contribute": "https://github.com/dalkedev/snurpo/blob/main/CONTRIBUTING.md",
     "issues": "https://github.com/dalkedev/snurpo/issues/new/choose",
     "coffee": "https://buymeacoffee.com/dalkedev",
     "creator": "https://www.dalkedev.pl/",
-    "checksums": "https://github.com/dalkedev/snurpo/releases/download/v1.5.0/SHA256SUMS.txt",
-    "macos": "https://github.com/dalkedev/snurpo/releases/download/v1.5.0/Snurpo-v1.5.0-macOS-arm64.zip",
-    "windows": "https://github.com/dalkedev/snurpo/releases/download/v1.5.0/Snurpo-v1.5.0-Windows-x64-setup.exe",
-    "linuxAppImage": "https://github.com/dalkedev/snurpo/releases/download/v1.5.0/Snurpo-v1.5.0-Linux-x64.AppImage",
-    "linuxDeb": "https://github.com/dalkedev/snurpo/releases/download/v1.5.0/Snurpo-v1.5.0-Linux-x64.deb"
+    "checksums": "https://github.com/dalkedev/snurpo/releases/download/v1.5.1/SHA256SUMS.txt",
+    "macos": "https://github.com/dalkedev/snurpo/releases/download/v1.5.1/Snurpo-v1.5.1-macOS-arm64.zip",
+    "windows": "https://github.com/dalkedev/snurpo/releases/download/v1.5.1/Snurpo-v1.5.1-Windows-x64-setup.exe",
+    "linuxAppImage": "https://github.com/dalkedev/snurpo/releases/download/v1.5.1/Snurpo-v1.5.1-Linux-x64.AppImage",
+    "linuxDeb": "https://github.com/dalkedev/snurpo/releases/download/v1.5.1/Snurpo-v1.5.1-Linux-x64.deb"
   },
   "en": {
     "meta": {
@@ -59,7 +59,7 @@
       "body": "See what your app sends and what its API sends back. Capture HTTP(S), inspect the exchange, then change it and try again.",
       "primary": "Download Snurpo",
       "secondary": "Take a closer look",
-      "releaseLabel": "Snurpo 1.5.0",
+      "releaseLabel": "Snurpo 1.5.1",
       "aside": "Big nose. Specific questions.",
       "localNote": "Local capture. No account required."
     },
@@ -119,7 +119,7 @@
       "body": "Open Copy as cURL, review the command and copy it into your terminal. Keep the captured method, URL, repeated headers and text or binary body.",
       "action": "See Copy as cURL",
       "linkKey": "curl",
-      "releaseNote": "New in 1.5.0",
+      "releaseNote": "Introduced in 1.5.0",
       "fineprint": "For sh, bash and zsh. Previewing and copying send no traffic. The command can include captured credentials; review it before sharing.",
       "screenshotCaption": "Copy as cURL in the native Snurpo 1.5.0 app.",
       "demoSetup": "In the Snurpo app, select Generate test traffic and keep it open. Run this command in a POSIX shell to query the built-in demo.",
@@ -150,7 +150,7 @@
     },
     "download": {
       "title": "Give your next bug a closer look.",
-      "body": "Download Snurpo 1.5.0. Local capture, saved sessions and export need no account or subscription.",
+      "body": "Download Snurpo 1.5.1. Local capture, saved sessions and export need no account or subscription.",
       "platforms": [
         {
           "id": "macos",
@@ -214,7 +214,7 @@
       "body": "Zobacz, co wysyła Twoja aplikacja i co odsyła API. Przechwyć HTTP(S), sprawdź całą wymianę, zmień szczegół i spróbuj ponownie.",
       "primary": "Pobierz Snurpo",
       "secondary": "Przyjrzyj się bliżej",
-      "releaseLabel": "Snurpo 1.5.0",
+      "releaseLabel": "Snurpo 1.5.1",
       "aside": "Duży nos. Konkretne pytania.",
       "localNote": "Lokalne przechwytywanie. Bez zakładania konta."
     },
@@ -274,7 +274,7 @@
       "body": "Otwórz Copy as cURL, sprawdź komendę i skopiuj ją do terminala. Zachowaj metodę, URL, powtarzające się nagłówki oraz tekstowe lub binarne body.",
       "action": "Zobacz Copy as cURL",
       "linkKey": "curl",
-      "releaseNote": "Nowość w 1.5.0",
+      "releaseNote": "Od wersji 1.5.0",
       "fineprint": "Dla sh, bash i zsh. Podgląd i kopiowanie nie wysyłają ruchu. Komenda może zawierać przechwycone dane uwierzytelniające; sprawdź ją przed udostępnieniem.",
       "screenshotCaption": "Copy as cURL w natywnej aplikacji Snurpo 1.5.0.",
       "demoSetup": "W Snurpo wybierz Generate test traffic i pozostaw aplikację otwartą. Uruchom tę komendę w powłoce POSIX, aby odpytać wbudowane demo.",
@@ -305,7 +305,7 @@
     },
     "download": {
       "title": "Przyjrzyj się kolejnemu bugowi z bliska.",
-      "body": "Pobierz Snurpo 1.5.0. Lokalne przechwytywanie, zapis sesji i eksport nie wymagają konta ani subskrypcji.",
+      "body": "Pobierz Snurpo 1.5.1. Lokalne przechwytywanie, zapis sesji i eksport nie wymagają konta ani subskrypcji.",
       "platforms": [
         {
           "id": "macos",

@@ -33,7 +33,7 @@ The former Sites project metadata has been removed from the current source tree.
 
 The canonical origin is `https://snurpo.dev`: English at `/`, Polish at `/pl/`. The build generates absolute canonical, language-alternate and social-image URLs, permits crawling in `robots.txt`, and lists both language routes in `/sitemap.xml`. The domain is verified in Google Search Console, with `https://snurpo.dev/sitemap.xml` submitted for both language routes. Both hostnames use apex canonical URLs; redirect and TLS configuration are hosting concerns.
 
-Downloads currently target verified release 1.5.0. Update `content.json` when releasing a newer app. Screenshot captions must retain the version actually pictured.
+Downloads follow the released version set in `content.json`. Verify the public assets before updating that version. Screenshot captions must retain the version actually pictured.
 
 ## Documentation
 
