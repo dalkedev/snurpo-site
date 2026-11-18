@@ -13,6 +13,7 @@
 <p>Create a session with <strong>New session</strong>, then select <strong>Start capture</strong>. <strong>Connection settings</strong> shows the current listener address and port. Configure your HTTP client to use that proxy:</p>
 <div class="doc-code"><div class="code-caption"><span>sh</span><button type="button" class="copy-code" aria-label="Copy code example">Copy</button></div><pre tabindex="0"><code>curl --proxy http://127.0.0.1:17890 http://example.com</code></pre></div>
 <p>This command sends a real request to example.com. Replace the proxy port if you changed it in Snurpo. The listener binds to localhost; it is not a proxy exposed to your whole network.</p>
+<p>In Windows PowerShell 5.1, use <code>curl.exe</code> in place of <code>curl</code> to call the cURL executable.</p>
 <p>Select the new exchange and compare what your client sent with what the server returned. For encrypted traffic, continue with <a href="/docs/https/">HTTPS setup</a>.</p>
 <h2 id="keep-the-investigation-readable">Keep the investigation readable<a class="heading-anchor" href="#keep-the-investigation-readable" aria-label="Link to Keep the investigation readable">#</a></h2>
 <p>Use <strong>Session details</strong> beside the session name to add a useful name, notes, tags or a pin. Capture is autosaved in the local archive. <strong>Stop capture</strong> stops listening; it does not delete the session.</p>
