@@ -22,6 +22,8 @@
     "releaseNotes": "/docs/releases/",
     "source": "https://github.com/dalkedev/snurpo",
     "docs": "/docs/",
+    "installation": "/docs/installation/",
+    "firstCapture": "/docs/first-capture/",
     "rules": "/docs/rules-breakpoints/",
     "curl": "/docs/replay-curl/",
     "mcp": "/docs/mcp/",
@@ -61,6 +63,7 @@
       "aside": "Big nose. Specific questions.",
       "localNote": "Local capture. No account required."
     },
+    "firstCaptureLabel": "Try your first capture",
     "capture": {
       "title": "The request is only half the story.",
       "body": "Follow the whole exchange: URL, headers, body, response and timing. Find the failing calls without losing the surrounding context.",
@@ -119,6 +122,8 @@
       "releaseNote": "New in 1.5.0",
       "fineprint": "For sh, bash and zsh. Previewing and copying send no traffic. The command can include captured credentials; review it before sharing.",
       "screenshotCaption": "Copy as cURL in the native Snurpo 1.5.0 app.",
+      "demoSetup": "In the Snurpo app, select Generate test traffic and keep it open. Run this command in a POSIX shell to query the built-in demo.",
+      "demoResult": "Returns sample products as JSON from Snurpo’s local test server.",
       "copyLabel": "Copy command",
       "copiedLabel": "Copied",
       "copyFailedLabel": "Select the command to copy it manually."
@@ -150,25 +155,25 @@
         {
           "id": "macos",
           "label": "Download for macOS",
-          "detail": "Apple Silicon · ZIP",
+          "detail": "Apple Silicon · ZIP · Ad hoc signature",
           "linkKey": "macos"
         },
         {
           "id": "windows",
           "label": "Download for Windows",
-          "detail": "x64 · Installer",
+          "detail": "x64 · Installer · Experimental",
           "linkKey": "windows"
         },
         {
           "id": "linuxAppImage",
           "label": "Download for Linux",
-          "detail": "x64 · AppImage",
+          "detail": "x64 · AppImage · Experimental",
           "linkKey": "linuxAppImage"
         },
         {
           "id": "linuxDeb",
           "label": "Download Debian package",
-          "detail": "Linux x64 · DEB",
+          "detail": "Linux x64 · DEB · Experimental",
           "linkKey": "linuxDeb"
         }
       ],
@@ -213,6 +218,7 @@
       "aside": "Duży nos. Konkretne pytania.",
       "localNote": "Lokalne przechwytywanie. Bez zakładania konta."
     },
+    "firstCaptureLabel": "Przechwyć pierwszy request",
     "capture": {
       "title": "Request to dopiero połowa historii.",
       "body": "Prześledź całą wymianę: URL, nagłówki, body, odpowiedź i czas. Znajdź nieudane wywołania, zachowując ich kontekst.",
@@ -271,6 +277,8 @@
       "releaseNote": "Nowość w 1.5.0",
       "fineprint": "Dla sh, bash i zsh. Podgląd i kopiowanie nie wysyłają ruchu. Komenda może zawierać przechwycone dane uwierzytelniające; sprawdź ją przed udostępnieniem.",
       "screenshotCaption": "Copy as cURL w natywnej aplikacji Snurpo 1.5.0.",
+      "demoSetup": "W Snurpo wybierz Generate test traffic i pozostaw aplikację otwartą. Uruchom tę komendę w powłoce POSIX, aby odpytać wbudowane demo.",
+      "demoResult": "Lokalny serwer testowy Snurpo zwróci przykładowe produkty jako JSON.",
       "copyLabel": "Kopiuj komendę",
       "copiedLabel": "Skopiowano",
       "copyFailedLabel": "Zaznacz komendę i skopiuj ją ręcznie."
@@ -302,25 +310,25 @@
         {
           "id": "macos",
           "label": "Pobierz na macOS",
-          "detail": "Apple Silicon · ZIP",
+          "detail": "Apple Silicon · ZIP · Podpis ad hoc",
           "linkKey": "macos"
         },
         {
           "id": "windows",
           "label": "Pobierz na Windows",
-          "detail": "x64 · Instalator",
+          "detail": "x64 · Instalator · Wersja eksperymentalna",
           "linkKey": "windows"
         },
         {
           "id": "linuxAppImage",
           "label": "Pobierz na Linux",
-          "detail": "x64 · AppImage",
+          "detail": "x64 · AppImage · Wersja eksperymentalna",
           "linkKey": "linuxAppImage"
         },
         {
           "id": "linuxDeb",
           "label": "Pobierz pakiet Debian",
-          "detail": "Linux x64 · DEB",
+          "detail": "Linux x64 · DEB · Wersja eksperymentalna",
           "linkKey": "linuxDeb"
         }
       ],
