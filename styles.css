@@ -43,3 +43,58 @@
 @media(max-width:370px){.site-header{gap:10px}.site-header nav .nav-docs{font-size:14px;padding-inline:10px}}
 
 @media(max-width:600px){.terminal-setup{padding-inline:15px}}
+
+@layer components {
+  .ticket-case { max-width: 1220px; padding-bottom: 25px; }
+  .ticket-case [hidden] { display: none; }
+  .case-intro { display: grid; grid-template-columns: 1fr .85fr; gap: 8%; align-items: end; margin-bottom: 34px; }
+  .case-intro h2 { max-width: 16ch; }
+  .case-intro p { font-size: clamp(17px, 1.6vw, 21px); line-height: 1.5; }
+  .case-workbench { border: 3px solid var(--ink); border-radius: 21px; background: #fcf2e4; box-shadow: 5px 6px 0 var(--ink); }
+  .case-bar, .case-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px 14px; padding: 13px clamp(15px, 2.2vw, 29px); }
+  .case-bar { border-radius: 17px 17px 0 0; border-bottom: 2px solid var(--ink); background: var(--lavender); }
+  .case-bar h3 { font-size: clamp(20px, 2.3vw, 29px); }
+  .case-bar > span, .case-meta, .case-row-number { font: 600 12px/1.4 ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .case-grid { display: grid; grid-template-columns: 46% minmax(0, 1fr); }
+  .case-archive, .case-detail { min-width: 0; padding: clamp(16px, 2.2vw, 29px); }
+  .case-archive { background: var(--cream); border-right: 2px dashed #9d8c98; }
+  .case-filter, .case-action { min-height: 44px; border: 2px solid var(--ink); border-radius: 100px; padding: 8px 17px; font: 600 18px/1.15 var(--display); }
+  .case-filter { background: transparent; }
+  .case-filter[aria-pressed=true] { background: var(--lavender); }
+  .case-action { background: var(--mint); }
+  .case-filter:hover, .case-action:hover { box-shadow: 2px 2px 0 var(--ink); }
+  .case-meta { color: var(--muted); margin: 16px 0 7px; }
+  .case-requests { display: grid; gap: 4px; }
+  .case-row { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 8px; width: 100%; min-height: 42px; border: 1px solid transparent; border-radius: 8px; padding: 6px 9px; background: transparent; text-align: start; }
+  .case-row:hover, .case-row[aria-pressed=true] { border-color: #a98eab; background: #f2e4f6; }
+  .case-row-number { color: var(--muted); font-size: 11px; }
+  .case-row code { font-size: clamp(12px, 1.2vw, 15px); overflow-wrap: anywhere; }
+  .case-row .status, .case-detail-label .status, .case-comparison .status { font-size: 13px; }
+  .case-detail { align-self: center; }
+  .case-detail h3 { font-size: clamp(23px, 2vw, 30px); }
+  .case-detail p { font-size: 15px; line-height: 1.55; margin-top: 9px; }
+  .case-detail-label { display: flex; align-items: center; gap: 9px; font-size: 13px; margin-bottom: 9px; }
+  .case-code { white-space: pre-wrap; background: var(--cream); border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; margin-top: 12px; font-size: 14px; }
+  .case-form { margin-top: 12px; }
+  .case-form label { display: block; margin-bottom: 4px; font-size: 13px; font-weight: 800; }
+  .case-form-controls { display: flex; gap: 10px; flex-wrap: wrap; }
+  .case-form input { width: 85px; min-height: 44px; border: 1px solid var(--ink); border-radius: 8px; background: white; color: var(--ink); padding: 5px 9px; font: 600 16px/1.3 var(--body); }
+  .case-form .case-validation { color: #882f28; font-size: 13px; font-weight: 700; }
+  .case-comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin: 16px 0 12px; }
+  .case-comparison > div { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px; padding: 9px 11px; border: 1px solid #b0a2ad; border-radius: 8px; background: var(--cream); font-size: 14px; font-weight: 700; }
+  .case-comparison code { flex-basis: 100%; overflow-wrap: anywhere; font-size: 13px; font-weight: 400; }
+  .case-bottom { border-top: 1px solid var(--line); color: var(--muted); }
+  .case-bottom small { max-width: 56ch; }
+  .case-bottom button { background: none; min-height: 40px; padding: 3px 0; text-decoration: underline; text-underline-offset: 3px; font-size: 14px; }
+  .case-proof { margin-top: 20px; font-size: 14px; }
+  .case-sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
+@layer responsive {
+  @media (max-width: 760px) {
+    .ticket-case { padding-bottom: 12px; }
+    .case-intro, .case-grid { grid-template-columns: minmax(0, 1fr); }
+    .case-intro { gap: 14px; margin-bottom: 22px; }
+    .case-archive { border-right: 0; border-bottom: 2px dashed #9d8c98; }
+    .case-bottom { gap: 0 10px; }
+  }
+}

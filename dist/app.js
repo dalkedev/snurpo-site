@@ -10,7 +10,7 @@ const samples = {
  checkout:{method:'POST',path:'/api/checkout',status:503,statusText:'Service Unavailable',time:1240,request:{product_id:'snurpo-sticker',quantity:1},response:{error:'service_unavailable',message:'Payment provider is offline.',retry_after:120}},
  profile:{method:'GET',path:'/api/profile',status:200,statusText:'OK',time:38,request:{},response:{id:'dev_42',name:'Curious developer',theme:'snurpo'}}
 };
-let selected='checkout'; let tab='response';
+let selected='products'; let tab='response';
 function highlight(obj){return escape(JSON.stringify(obj,null,2)).replace(/(&quot;[^\n]*?&quot;)(?=:)/g,'<span class="key">$1</span>');}
 function renderInspector(){
  const s=samples[selected];
@@ -64,3 +64,141 @@ const dialog=$('#image-dialog');let opener;
 all('.screenshot-open').forEach(b=>b.addEventListener('click',()=>{opener=b;const file=b.dataset.image;$('#dialog-image').src='/assets/'+file+'.webp';$('#dialog-image').alt=b.querySelector('img').alt;$('#dialog-caption').textContent='Snurpo '+(file==='copy-as-curl'?'1.5.0':'1.4.2')+' · '+text('Native app','Natywna aplikacja');dialog.showModal();}));
 $('#close-dialog').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});dialog.addEventListener('close',()=>opener?.focus());
 renderInspector();
+
+function startTicketCase() {
+  const root = document.getElementById('case');
+  const find = selector => root.querySelector(selector);
+  const workbench = find('[data-case-workbench]');
+  const filter = find('[data-case-filter]');
+  const list = find('#case-requests');
+  const quantity = find('#case-qty');
+  const form = find('[data-case-form]');
+  const validation = find('#case-validation');
+  const feedback = find('[data-case-status]');
+  const labels = data.caseLabels;
+  const format = new Intl.NumberFormat(data.lang, { useGrouping: 'always' });
+  const paths = ['/printer/status', '/events', '/catalog', '/session'];
+  const fixtureSize = 1001;
+  const archive = Array.from({ length: fixtureSize }, (_, index) => ({
+    id: index + 1, method: 'GET', path: paths[index % paths.length], status: 200
+  }));
+  const original = { id: 17, method: 'POST', path: '/tickets/print', status: 422, qty: 0 };
+  archive[original.id - 1] = original;
+  let errorsOnly = false;
+  let selectedId = null;
+
+  function view(name) {
+    for (const panel of root.querySelectorAll('[data-case-view]')) {
+      panel.hidden = panel.dataset.caseView !== name;
+    }
+  }
+
+  function renderList() {
+    const matches = errorsOnly ? archive.filter(row => row.status >= 400) : archive;
+    const newest = matches.slice(-4).reverse();
+    const fragment = document.createDocumentFragment();
+    for (const row of newest) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'case-row';
+      button.dataset.rowId = row.id;
+      button.setAttribute('aria-pressed', String(row.id === selectedId));
+      const number = document.createElement('span');
+      number.className = 'case-row-number';
+      number.textContent = '#' + String(row.id).padStart(4, '0');
+      const endpoint = document.createElement('code');
+      endpoint.textContent = row.method + ' ' + row.path;
+      const status = document.createElement('span');
+      status.className = 'status ' + (row.status >= 400 ? 'fail' : 'ok');
+      status.textContent = row.status;
+      button.append(number, endpoint, status);
+      fragment.append(button);
+    }
+    list.replaceChildren(fragment);
+    filter.setAttribute('aria-pressed', String(errorsOnly));
+    find('[data-case-scope]').textContent = errorsOnly ? labels.oneMatch : labels.lastFour;
+    find('[data-case-count]').textContent = labels.requests + ' · ' + format.format(archive.length);
+  }
+
+  function clearValidation() {
+    validation.hidden = true;
+    quantity.removeAttribute('aria-invalid');
+  }
+
+  function showWaiting() {
+    view('waiting');
+    find('[data-case-recent-hint]').hidden = errorsOnly;
+    find('[data-case-filtered-hint]').hidden = !errorsOnly;
+  }
+
+  function showPrint(row) {
+    view('printed');
+    find('[data-case-payload]').textContent = '{ "qty": ' + row.qty + ' }';
+    feedback.textContent = labels.replaySuccess;
+  }
+
+  list.addEventListener('click', event => {
+    const selectedButton = event.target.closest('button[data-row-id]');
+    if (!selectedButton) return;
+    selectedId = Number(selectedButton.dataset.rowId);
+    const row = archive[selectedId - 1];
+    for (const button of list.children) {
+      button.setAttribute('aria-pressed', String(button === selectedButton));
+    }
+    if (row.status === 422) {
+      view('edit');
+      clearValidation();
+      quantity.value = String(row.qty);
+      feedback.textContent = labels.opened;
+    } else if (row.status === 201) {
+      showPrint(row);
+    } else {
+      view('healthy');
+      find('[data-case-healthy-path]').textContent = row.method + ' ' + row.path;
+      feedback.textContent = row.path + '. ' + labels.healthy;
+    }
+  });
+
+  filter.addEventListener('click', () => {
+    errorsOnly = !errorsOnly;
+    selectedId = null;
+    showWaiting();
+    renderList();
+    feedback.textContent = errorsOnly ? labels.oneError : labels.recent;
+  });
+
+  quantity.addEventListener('input', clearValidation);
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    const qty = quantity.valueAsNumber;
+    if (!Number.isSafeInteger(qty) || qty < 1) {
+      validation.hidden = false;
+      quantity.setAttribute('aria-invalid', 'true');
+      quantity.focus();
+      return;
+    }
+    const replay = { ...original, id: archive.length + 1, qty, status: 201 };
+    archive.push(replay);
+    selectedId = replay.id;
+    errorsOnly = false;
+    renderList();
+    showPrint(replay);
+    find('[data-case-result-title]').focus();
+  });
+
+  find('[data-case-reset]').addEventListener('click', () => {
+    archive.length = fixtureSize;
+    selectedId = null;
+    errorsOnly = false;
+    form.reset();
+    clearValidation();
+    showWaiting();
+    renderList();
+    feedback.textContent = labels.reset;
+    filter.focus();
+  });
+  renderList();
+  workbench.hidden = false;
+}
+
+startTicketCase();
