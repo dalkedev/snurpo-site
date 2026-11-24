@@ -6,6 +6,7 @@
     "purpose": "Bilingual content draft only. Root may adapt hierarchy and length to the selected composition.",
     "section_order": [
       "hero",
+      "ticketCase",
       "capture",
       "change",
       "terminal",
@@ -194,6 +195,42 @@
       "coffee": "Buy me a coffee",
       "coffeeNote": "Support the next curious idea.",
       "backToTop": "Back to top"
+    },
+    "ticketCase": {
+      "cta": "Solve the ticket mystery",
+      "title": "Who stopped the ticket printer?",
+      "intro": "The payment went through. The printer stayed quiet. Follow the requests from the box office and get a ticket out of the machine.",
+      "synthetic": "Simulated session. All requests stay in this browser.",
+      "archive": "Box office archive",
+      "group": "Requests in this session",
+      "filter": "Errors only",
+      "waiting": "Why is the printer silent?",
+      "recentHint": "The last four requests look fine. Check earlier in the session for a failed exchange.",
+      "filteredHint": "One request failed. Open it and look at the body the till sent.",
+      "editTitle": "The printer rejected this request.",
+      "errorBody": "The ticket count must be positive.",
+      "qty": "Ticket count (qty)",
+      "replay": "Replay request",
+      "invalid": "Enter a positive whole number of tickets.",
+      "printed": "The printer accepted the job.",
+      "original": "Original",
+      "replayed": "Replay",
+      "doneHint": "The replay is a new entry in the session. Switch the error filter back on to find the original.",
+      "reset": "Start again",
+      "proof": "See how full-session filtering works in Snurpo",
+      "fallback": "Enable JavaScript to investigate the case, or read the guide to inspecting and searching a session.",
+      "guide": "Read the search guide",
+      "runtime": {
+        "requests": "Requests in session",
+        "lastFour": "Last four requests",
+        "oneMatch": "1 match in the full session",
+        "healthy": "HTTP 200. The till got the response it expected. Keep looking in the archive.",
+        "oneError": "One error found. Choose the request to inspect it.",
+        "recent": "Showing the last four requests.",
+        "opened": "HTTP 422. You can edit the ticket count and replay this request.",
+        "replaySuccess": "HTTP 201. The printer accepted the job.",
+        "reset": "The sample session has been restored."
+      }
     }
   },
   "pl": {
@@ -349,6 +386,42 @@
       "coffee": "Postaw mi kawę",
       "coffeeNote": "Wesprzyj kolejny ciekawy pomysł.",
       "backToTop": "Wróć na górę"
+    },
+    "ticketCase": {
+      "cta": "Rozwiąż zagadkę biletów",
+      "title": "Kto zatrzymał druk biletów?",
+      "intro": "Płatność przeszła. Drukarka milczy. Prześledź żądania z kasy i spraw, żeby z drukarki wyszedł bilet.",
+      "synthetic": "Symulacja na przykładowych danych. Wszystkie żądania pozostają w przeglądarce.",
+      "archive": "Archiwum kasy biletowej",
+      "group": "Żądania w tej sesji",
+      "filter": "Tylko błędy",
+      "waiting": "Dlaczego drukarka milczy?",
+      "recentHint": "Cztery ostatnie żądania wyglądają poprawnie. Sprawdź, czy wcześniej kasa dostała błąd.",
+      "filteredHint": "Jedno żądanie się nie powiodło. Otwórz je i zobacz, co wysłała kasa.",
+      "editTitle": "Drukarka odrzuciła żądanie.",
+      "errorBody": "Liczba biletów musi być dodatnia.",
+      "qty": "Liczba biletów (qty)",
+      "replay": "Ponów żądanie",
+      "invalid": "Podaj dodatnią, całkowitą liczbę biletów.",
+      "printed": "Drukarka przyjęła zlecenie.",
+      "original": "Oryginał",
+      "replayed": "Powtórzenie",
+      "doneHint": "Ponowione żądanie ma własny wpis w sesji. Włącz ponownie filtr błędów, żeby odszukać oryginał.",
+      "reset": "Zacznij od nowa",
+      "proof": "Jak Snurpo filtruje całą sesję",
+      "fallback": "Włącz JavaScript, aby rozwiązać zagadkę, albo zajrzyj do poradnika o przeszukiwaniu sesji.",
+      "guide": "Otwórz poradnik wyszukiwania",
+      "runtime": {
+        "requests": "Żądania w sesji",
+        "lastFour": "Ostatnie cztery żądania",
+        "oneMatch": "1 wynik w całej sesji",
+        "healthy": "HTTP 200. Kasa dostała poprawną odpowiedź. Szukaj dalej w archiwum.",
+        "oneError": "Znaleziono jeden błąd. Wybierz żądanie z listy.",
+        "recent": "Wyświetlono ostatnie cztery żądania.",
+        "opened": "HTTP 422. Możesz zmienić liczbę biletów i ponowić żądanie.",
+        "replaySuccess": "HTTP 201. Drukarka przyjęła zlecenie.",
+        "reset": "Przywrócono początkową sesję."
+      }
     }
   }
 }
