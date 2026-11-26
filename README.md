@@ -21,7 +21,7 @@ The site has no runtime dependencies, external font service, analytics or accoun
 - `assets/provenance.json`: source, transformation and version of each image.
 - `fonts/`: self-hosted Fredoka and Manrope, with their OFL licenses.
 
-Rebuild after source changes. Only `dist/` is served. Example requests are local presentation data and never send network requests. Snurpo screenshots are actual native app captures; inspector/replay/analysis are 1.4.2, Copy as cURL is 1.5.0. They contain no pointer or macOS system sharing strip.
+Rebuild after source changes. Only `dist/` is served. Example requests are local presentation data and never send network requests. Snurpo screenshots are actual native app captures; inspector/replay/analysis are 1.4.2, Copy as cURL is 1.5.0. They contain no pointer or macOS system sharing strip. The 1.5.1 video replays a local demo capture in the release frontend. Its poster and capture method are listed in `assets/provenance.json`.
 
 ## Hosting
 

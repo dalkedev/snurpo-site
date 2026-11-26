@@ -57,7 +57,36 @@ const featureDescriptions = [
  [text('Edit the method, URL, headers or body, then replay. Every replay creates a new exchange, so you can compare it with the original.','Zmień metodę, URL, nagłówki albo body i ponów request. Każde ponowienie tworzy nową wymianę, którą porównasz z oryginałem.'),'https://github.com/dalkedev/snurpo/blob/main/docs/GETTING_STARTED.md',text('Explore replay','Poznaj ponawianie')],
  [text('Review the full command before copying. Bring captured headers and bodies to sh, bash or zsh without sending another request from the preview.','Sprawdź całą komendę przed skopiowaniem. Przenieś nagłówki i body do sh, bash lub zsh. Podgląd nie wysyła kolejnego requestu.'),'https://github.com/dalkedev/snurpo/blob/main/docs/GETTING_STARTED.md#copy-a-request-to-your-terminal',text('Read the cURL guide','Poznaj Copy as cURL')]
 ];
-all('[data-gallery]').forEach(b=>b.addEventListener('click',()=>{const index=Number(b.dataset.gallery),g=data.gallery[index],d=featureDescriptions[index];all('[data-gallery]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',x===b);});$('#app-screen').src='/assets/'+g.file+'.webp';$('#app-screen').alt=g.label+' · Snurpo '+g.version;$('#app-screen').closest('button').dataset.image=g.file;$('#gallery-caption').textContent=g.caption;$('#gallery-version').textContent='Snurpo '+g.version;$('#gallery-description p').textContent=d[0];const a=$('#gallery-description a');a.href=d[1];a.firstChild.textContent=d[2];}));
+const galleryButtons = all('[data-gallery]');
+const demo = $('#capture-demo');
+const screenshot = $('#capture-screenshot');
+const description = $('#gallery-description');
+galleryButtons.forEach(button => button.addEventListener('click', () => {
+  const item = button.dataset.gallery;
+  const showDemo = item === 'demo';
+  for (const option of galleryButtons) {
+    option.classList.toggle('active', option === button);
+    option.setAttribute('aria-pressed', String(option === button));
+  }
+  demo.hidden = !showDemo;
+  screenshot.hidden = showDemo;
+  description.hidden = showDemo;
+  if (showDemo) return;
+
+  demo.querySelector('video').pause();
+  const entry = data.gallery[item];
+  const [copy, href, linkText] = featureDescriptions[item];
+  const image = $('#app-screen');
+  image.src = '/assets/' + entry.file + '.webp';
+  image.alt = entry.label + ' · Snurpo ' + entry.version;
+  image.closest('button').dataset.image = entry.file;
+  $('#gallery-caption').textContent = entry.caption;
+  $('#gallery-version').textContent = 'Snurpo ' + entry.version;
+  description.querySelector('p').textContent = copy;
+  const link = description.querySelector('a');
+  link.href = href;
+  link.firstChild.textContent = linkText;
+}));
 $('#mock-toggle').addEventListener('click',()=>{let enabled=$('#mock-toggle').getAttribute('aria-checked')!=='true';$('#mock-toggle').setAttribute('aria-checked',enabled);$('#mock-feedback').textContent=enabled?data.labels.mock:data.labels.reset;});
 $('#copy-command').addEventListener('click',async()=>{const button=$('#copy-command');try{await navigator.clipboard.writeText(data.command);button.querySelector('span').textContent=data.copy.copiedLabel;$('#copy-feedback').textContent=data.copy.copiedLabel;setTimeout(()=>{button.querySelector('span').textContent=data.copy.copyLabel;$('#copy-feedback').textContent='';},2500);}catch{$('#copy-feedback').textContent=data.copy.copyFailedLabel;const selection=window.getSelection(),range=document.createRange();range.selectNodeContents($('#curl-command'));selection.removeAllRanges();selection.addRange(range);}});
 const dialog=$('#image-dialog');let opener;

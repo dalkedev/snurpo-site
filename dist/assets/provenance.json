@@ -227,5 +227,35 @@
   "prepared": "2026-11-12",
   "license": "AGPL-3.0-or-later",
   "scope": "Web delivery derivatives of existing canonical artwork and native screenshots. Originals untouched. No cropping, cursor removal, retouching or new generated app imagery.",
-  "metadata": "impeccable embed-prompt embeds PNG tEXt; WebP uses the tool's .webp.json sidecar fallback. Keep those sidecars beside the rasters."
+  "metadata": "impeccable embed-prompt embeds PNG tEXt; WebP uses the tool's .webp.json sidecar fallback. Keep those sidecars beside the rasters.",
+  "recordings": [
+    {
+      "source": "https://github.com/dalkedev/snurpo/tree/v1.5.1",
+      "sourceVersion": "1.5.1",
+      "capture": "The release engine generated six localhost exchanges in an isolated demo session. The release frontend displayed the archived requests through a local read-only capture harness. The recording follows the sign-in request from the traffic table to its HTTP 401 response and Copy as cURL preview.",
+      "presentation": "Cropped frontend frames with editorial callouts, without cursor or operating-system chrome.",
+      "files": [
+        {
+          "file": "snurpo-demo.mp4",
+          "role": "H.264 video",
+          "dimensions": [
+            1200,
+            720
+          ],
+          "bytes": 458047,
+          "sha256": "38f9d22cdde38409034868c988240e10013fb4c473c6d78865eb10ef70aa70f8"
+        },
+        {
+          "file": "snurpo-demo.webp",
+          "role": "Static poster",
+          "dimensions": [
+            1200,
+            720
+          ],
+          "bytes": 39052,
+          "sha256": "929ed65d9df18c05bf057fc4f420c20a88bac31f599d21e84bc4716d07d3bf78"
+        }
+      ]
+    }
+  ]
 }
